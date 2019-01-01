@@ -1,0 +1,8 @@
+{{ user.username}}<br><br>
+
+
+{% for fields in user.bitcoin_set.all %}
+	Volume :{{ fields.volume }}<br>
+	NGN: {{ fields.NGN }}<br>
+	USD: {{ fields.USD }}<br><br>
+{% endfor %}

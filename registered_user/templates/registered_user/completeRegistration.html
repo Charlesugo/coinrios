@@ -1,0 +1,45 @@
+{% extends 'administrator/base.html' %}
+{% block navLinks %}{% load static %}
+{% block title %} <title>Welcome {{ user }} | Purchase BitCoin</title> {% endblock %}
+<li>
+    <a href="#">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <span>Dashboard</span>
+    </a>
+</li>
+<li>
+    <a href="{% url 'registered_user:dashboard' %}">
+        <i class="text-warning fa fa-usd" aria-hidden="true"></i>
+        <span>BUY</span>
+    </a>
+</li>
+<li>
+    <a href="#">
+        <i class="text-info fa fa-usd" aria-hidden="true"></i>
+        <span>SELL</span>
+    </a>
+</li>
+<li class="nav-active">
+    <a href="#">
+        <i class="text-warning fa fa-user" aria-hidden="true"></i>
+        <span>MY PROFILE</span>
+    </a>
+</li>
+{% endblock %} {% block body %}
+
+<div class="row">
+    <div class="col-md-12 col-lg-6 col-xl-">
+        <div class="panel panel-default">
+            <div class="panel-heading"></div>
+            <div class="panel-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form }}<br>
+                    <button type="submit" class="btn btn-primary pull-right">Complete Registration</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

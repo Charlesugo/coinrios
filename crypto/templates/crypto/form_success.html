@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Success</title>
+    <link rel="stylesheet" href="{% static 'crypto/css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/css/responsee.css' %}">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="{% static 'crypto/' %}css/template-style.css">
+</head>
+<body class="size-1140">
+    <div class="jumbotron">
+        <h1 class="display-4">Thank You!</h1>
+        <p class="lead">
+            Thank you for filling our form we will get back to you
+        </p>
+        <hr class="my-4">
+        <a class="btn btn-primary btn-lg text-white" href="{% url 'crypto:landingPage' %}" >Back to Home Page</a>
+    </div>
+    <br><br><br><br><br><br>
+    <footer>
+        <div class="line" style="positon:fixed; margin-top: 0px;">
+            <div class="s-12 l-6">
+               <p>Copyright 2019, Frontline Exchange</p>
+            </div>
+            <!--<div class="s-12 l-6">-->
+               <!--<a class="right" href="">Design and coding by Hugo</a>-->
+            <!--</div>-->
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+       {% load static %}
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Coin Rios</title>
+      <link rel="stylesheet" href="{% static 'crypto/css/components.css' %}">
+      <link rel="stylesheet" href="{% static 'crypto/css/bootstrap.css' %}">
+      <link rel="stylesheet" href="{% static 'crypto/css/responsee.css' %}">
+      <link rel="stylesheet" href="{% static 'crypto/css/icons.css' %}">
+      <link rel="stylesheet" href="{% static 'crypto/owl-carousel/owl.carousel.css' %}">
+      <link rel="stylesheet" href="{% static 'crypto/owl-carousel/owl.teme.css' %}">
+      <!-- CUSTOM STYLE -->
+      <link rel="stylesheet" href="{% static 'crypto/' %}css/template-style.css">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="{% static 'crypto/js/jquery-1.8.3.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'crypto/js/jquery-ui.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'crypto/js/template-scripts.js' %}"></script>
+   </head>
+   <body class="size-1140">
+  	  <!-- PREMIUM FEATURES BUTTON -->
+  	  <!--<a target="_blank" class="hide-s" href="../template/onepage-premium-template/" style="position:fixed;top:130px;right:-14px;z-index:10;">-->
+          <!--<img src="{% static 'crypto/img/premium-features.png' %}" alt="">-->
+      <!--</a>-->
+      <!-- TOP NAV WITH LOGO -->
+      <header>
+         <div id="topbar">
+            <div class="line">
+               <div class="s-12 m-6 l-6">
+                  <p>CONTACT US: <strong>08000000</strong> | <strong>contact@domain.com</strong></p>
+               </div>
+               <div class="s-12 m-6 l-6">
+                  <div class="social right">
+                      <!--<a><i class="icon-facebook_circle"></i></a>-->
+                      <!--<a><i class="icon-twitter_circle"></i></a>-->
+
+                      <a href="{% url 'create_registered_user' %}"> Register</a>
+                      |||
+                      <a href="{% url 'login' %}">Login</a>|||
+                      {% if user.is_authenticated %}
+                        <a href="{% url 'registered_user:dashboard' %}">Dashboard</a>
+                      {% endif %}
+                  </div>
+               </div>
+            </div>  
+         </div> 
+         <nav>
+            <div class="line">
+               <div class="s-12 l-2">
+                   <!--<img src="{% static 'crypto/img/logo.png' %}">-->
+                   <p class="logo"><strong>Coin</strong>Rios</p>
+               </div>
+               <div class="top-nav s-12 l-10">
+                  <p class="nav-text">Menu</p>
+                  <ul class="right">
+                     <li class="active-item"><a href="#carousel">Home</a></li>
+                     <li><a href="#features">Coins</a></li>
+                     <li><a href="#about-us">About Us</a></li>
+                     <li><a href="#our-work">Our Work</a></li>
+                     <li><a href="#services">Services</a></li>
+                     <li><a href="#contact">Contact</a></li>
+
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </header>  
+      <section>
+         <!-- CAROUSEL --> 
+         <div id="carousel">
+            <div id="owl-demo" class="owl-carousel owl-theme">
+               <div class="item">
+                  <img src="{% static 'crypto/img/third.jpg' %}" alt="">
+                  <div class="line">
+                     <div class="text hide-s">
+                        <h2>The Nigerian No. 1 Exchanger</h2>
+                        <p>Buy and sell coins in a minute</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- FIRST BLOCK -->
+         <div id="first-block">
+            <div class="line">
+               <h1>Buy and Sell Coins Now</h1>
+               <div class="container center">
+                   <div class="row justify-content-center">
+                       <div class="col col-md-4">
+                            <a class="white-btn" href="{% url 'registered_user:dashboard' %}">Buy</a>
+                       </div>
+                       <div class="col col-md-4">
+                            <a class="white-btn" href="{% url 'registered_user:sell' %}">Sell</a>
+                       </div>
+                   </div>
+               </div>
+            </div>
+         </div>
+         <!-- FEATURES -->
+         <div id="features">
+            <div class="container">
+               <div class="row">
+                  <div class="col col-md-6">
+                     <div class="card text-center">
+                        <div class="card-header bg-dark-blue text-white">
+                            BITCOIN
+                        </div>
+                        <div class="card-body">
+                            <i class="icon-tablet icon3x"></i>
+                            <div class="row">
+                                <div class="col col-sm-12 col-md-6">
+                                    <h5 class="card-title">BUY BITCOIN @ {{ btc_price }}</h5>
+                                    <a href="{% url 'registered_user:dashboard' %}" class="btn btn-primary text-white">BUY BITCOIN</a>
+                                </div>
+                                <div class="col col-sm-12 col-md-6">
+                                    <h5 class="card-title">SELL BITCOIN @ {{ btc_sell_price }}</h5>
+                                    <a href="{% url 'registered_user:sell' %}" class="btn btn-primary text-white">SELL BITCOIN</a>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col col-md-6">
+                     <div class="card text-center">
+                        <div class="card-header bg-dark-blue text-white">
+                            RIPPLE
+                        </div>
+                        <div class="card-body">
+                            <i class="icon-isight icon3x"></i>
+                            <div class="row">
+                                <div class="col col-sm-12 col-md-6">
+                                    <h5 class="card-title">BUY RIPPLE @ {{ ripple_price }}</h5>
+                                    <a href="{% url 'registered_user:dashboard' %}" class="btn btn-primary text-white">BUY RIPPLE</a>
+                                </div>
+                                <div class="col col-sm-12 col-md-6">
+                                    <h5 class="card-title">SELL RIPPLE @ {{ xrp_sell_price }}</h5>
+                                    <a href="{% url 'registered_user:sell' %}" class="btn btn-primary text-white">SELL RIPPLE</a>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                  </div>
+
+                   <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                  <div class="col col-md-6">
+                     <div class="card text-center">
+                        <div class="card-header bg-dark-blue text-white">
+                            ETHEREUM
+                        </div>
+                        <div class="card-body">
+                            <i class="icon-star icon3x"></i>
+                            <div class="row">
+                                <div class="col col-sm-12 col-md-6">
+                                    <h5 class="card-title">BUY ETHEREUM @ {{ ethereum_price }}</h5>
+                                    <a href="{% url 'registered_user:dashboard' %}" class="btn btn-primary text-white">BUY ETHEREUM</a>
+                                </div>
+                                <div class="col col-sm-12 col-md-6">
+                                    <h5 class="card-title">SELL ETHEREUM @ {{ eth_sell_price }}</h5>
+                                    <a href="{% url 'registered_user:sell' %}" class="btn btn-primary text-white">SELL ETHEREUM</a>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                  </div>
+
+                   <div class="col col-md-6">
+                     <div class="card text-center">
+                        <div class="card-header bg-dark-blue text-white">
+                            PERFECT ETHEREUM
+                        </div>
+                        <div class="card-body">
+                            <i class="icon-heart icon3x"></i>
+                            <div class="row">
+                                <div class="col col-sm-12 col-md-6">
+                                    <h5 class="card-title">BUY PERFECT MONEY @ {{ perfect_money_price }}</h5>
+                                    <a href="{% url 'registered_user:dashboard' %}" class="btn btn-primary text-white">BUY PERFECT MONEY</a>
+                                </div>
+                                <div class="col col-sm-12 col-md-6">
+                                    <h5 class="card-title">SELL PERFECT MONEY @ {{ pm_sell_price }}</h5>
+                                    <a href="{% url 'registered_user:sell' %}" class="btn btn-primary text-white">SELL PERFECT MONEY</a>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <!-- ABOUT US -->
+         <div id="about-us">
+            <div class="s-12 m-12 l-6 media-container">
+               <img src="{% static 'crypto/img/about.jpg' %}" alt="">
+            </div>
+            <article class="s-12 m-12 l-6">
+               <h2>We are<br> Crypto Currency<br> Heroes</h2>
+               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet 
+                 dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
+                 lobortis nisl ut aliquip ex ea commodo consequat.
+               </p>
+               <div class="about-us-icons">
+                  <i class="icon-paperplane_ico"></i> <i class="icon-trophy"></i> <i class="icon-clock"></i>
+               </div>
+            </article>
+         </div>
+         <!-- OUR WORK -->
+         <div id="our-work">
+            <div class="line">
+               <h2 class="section-title">Our Work</h2>
+               <div class="tabs">
+                  <div class="tab-item tab-active">
+                    <a class="tab-label active-btn">Web Design</a>
+                    <div class="tab-content">
+                      <div class="margin">
+                        <div class="s-12 m-6 l-3">
+                            <a class="our-work-container lightbox margin-bottom">
+                                <div class="our-work-text">
+                                    <h4>Hey You Hovered</h4>
+                                    <p>Laoreet dolore magna aliquam erat volutpat.</p>
+                                </div>
+                                <img src="{% static 'crypto/img/por1.jpg' %}" alt="">
+                            </a></div>
+                        <div class="s-12 m-6 l-3">
+                            <a class="our-work-container lightbox margin-bottom">
+                                <div class="our-work-text">
+                                    <h4>Lorem Ipsum Dolor</h4>
+                                    <p>Laoreet dolore magna aliquam erat volutpat.</p>
+                                </div>
+                                <img src="{% static 'crypto/img/por4.jpg' %}" alt="">
+                            </a>
+                        </div>
+                        <div class="s-12 m-6 l-3">
+                            <a class="our-work-container lightbox margin-bottom">
+                                <div class="our-work-text">
+                                    <h4>Lorem Ipsum Dolor</h4>
+                                    <p>Laoreet dolore magna aliquam erat volutpat.</p>
+                                </div>
+                                <img src="{% static 'crypto/img/por6.jpg' %}" alt="">
+                            </a>
+                        </div>
+                        <div class="s-12 m-6 l-3">
+                            <a class="our-work-container lightbox margin-bottom">
+                                <div class="our-work-text">
+                                    <h4>Lorem Ipsum Dolor</h4>
+                                    <p>Laoreet dolore magna aliquam erat volutpat.</p>
+                                </div>
+                                <img src="{% static 'crypto/img/por3.jpg' %}" alt="">
+                            </a>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="tab-item">
+                    <a class="tab-label">Development</a>        
+                    <div class="tab-content">
+                      <div class="margin">
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por7.jpg' %}" alt=""></a></div>
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por5.jpg' %}" alt=""></a></div>
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por1.jpg' %}" alt=""></a></div>
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por2.jpg' %}" alt=""></a></div>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="tab-item">
+                    <a class="tab-label">Social Campaigns</a>
+                    <div class="tab-content">
+                      <div class="margin">
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por4.jpg' %}" alt=""></a></div>
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por6.jpg' %}" alt=""></a></div>
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por3.jpg' %}" alt=""></a></div>
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por5.jpg' %}" alt=""></a></div>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="tab-item">
+                    <a class="tab-label">Photography</a>
+                    <div class="tab-conent">
+                      <div class="margin">
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por7.jpg' %}" alt=""></a></div>
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por2.jpg' %}" alt=""></a></div>
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por5.jpg' %}" alt=""></a></div>
+                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por6.jpg' %}" alt=""></a></div>
+                      </div>
+                    </div>  
+                  </div>
+               </div>
+            </div>
+         </div>         
+         <!-- SERVICES -->
+         <div id="services">
+            <div class="line">
+               <h2 class="section-title">What we do</h2>
+               <div class="margin">
+                  <div class="s-12 m-6 l-4 margin-bottom">
+                     <i class="icon-vector"></i>
+                     <div class="service-text">
+                        <h3>We create</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                     </div>
+                  </div>
+                  <div class="s-12 m-6 l-4 margin-bottom">
+                     <i class="icon-eye"></i>
+                     <div class="service-text">
+                        <h3>We look to the future</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                     </div>
+                  </div>
+                  <div class="s-12 m-12 l-4 margin-bottom">
+                     <i class="icon-random"></i>
+                     <div class="service-text">
+                        <h3>We find a solution</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- LATEST NEWS -->
+          <!--
+         <div id="latest-news">
+            <div class="line">
+              <h2 class="section-title">Latest News</h2> 
+              <div class="margin">
+                <div class="s-12 m-6 l-6">
+                  <div class="s-12 l-2">
+                    <div class="news-date">
+                      <p class="day">28</p><p class="month">AUGUST</p><p class="year">2015</p>
+                    </div>
+                  </div>
+                  <div class="s-12 l-10">
+                    <div class="news-text">
+                      <h4>First latest News</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+                    </div>
+                  </div>   
+                </div> 
+                <div class="s-12 m-6 l-6">
+                  <div class="s-12 l-2">
+                    <div class="news-date">
+                      <p class="day">12</p><p class="month">JULY</p><p class="year">2015</p>
+                    </div>
+                  </div>
+                  <div class="s-12 l-10">
+                    <div class="news-text">
+                      <h4>Second latest News</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+                    </div>
+                  </div>   
+                </div>  
+              </div>
+            </div>
+         </div>
+          -->
+         <!-- CONTACT -->
+         <div id="contact">
+            <div class="line">
+               <h2 class="section-title">Contact Us</h2>
+               <div class="margin">
+                  <div class="s-12 m-12 l-3 hide-m hide-s margin-bottom right-align">
+                    <img src="{% static 'crypto/img/contact.jpg' %}" alt="">
+                  </div>
+                  <div class="s-12 m-12 l-4 margin-bottom right-align">
+                     <h3>Coin Rios</h3>
+                     <address>
+                        <p><strong>Adress:</strong> Alba Plaza, Opp ITC, Jabi Abuja</p>
+                        <p><strong>Country:</strong> Nigeria - Africa</p>
+                        <p><strong>E-mail:</strong> info@domain.com</p>
+                     </address>
+                     <br />
+                     <h3>Social</h3>
+                     <p>
+                         <i class="icon-facebook icon"></i><!--https://www.facebook.com/pages/Vision-Design-graphic-ZOO/154664684553091-->
+                         <a href="#">Hugo Design - Coin Rios</a>
+                     </p>
+                     <p class="margin-bottom">
+                         <i class="icon-twitter icon"></i>
+                         <a href="#">Hugo Design - Coin Rios</a>
+                     </p>
+                  </div>
+
+                   <div class="s-12 m-12 l-5">
+                    <h3>Contact Form</h3>
+                    <form class="customform" method="post" action="">
+                        {% csrf_token %}
+                        <div class="s-12">
+                            <input name="email" maxlength="254" required id="id_email" placeholder="Your e-mail" title="Your e-mail" type="email" />
+                        </div>
+                        <div class="s-12">
+                            <input type="text" name="full_name" maxlength="200" required id="id_full_name" placeholder="Your name" title="Your name" />
+                        </div>
+                        <div class="s-12">
+                            <textarea placeholder="Your message" name="message" rows="5" required id="id_message"></textarea>
+                        </div>
+                        <div class="s-12 m-12 l-4"><button class="color-btn" type="submit">Submit Button</button></div>
+                    </form>
+                  </div>                
+               </div>
+            </div>
+         </div>
+         <!-- MAP -->
+         <!--<div id="map-block">  	  -->
+            <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1247814.3661917313!2d16.569872019090596!3d48.23131953825178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8cbf758ecb9f%3A0xddeb1d26bce5eccf!2sGallayova+2150%2F19%2C+841+02+D%C3%BAbravka!5e0!3m2!1ssk!2ssk!4v1440344568394" width="100%" height="450" frameborder="0" style="border:0"></iframe>-->
+         <!--</div>-->
+      </section>
+      <!-- FOOTER -->
+
+      <footer>
+         <div class="line">
+            <div class="s-12 l-6">
+               <p>Copyright 2019, Coin Rios</p>
+            </div>
+            <!--<div class="s-12 l-6">-->
+               <!--<a class="right" href="">Design and coding by Hugo</a>-->
+            <!--</div>-->
+         </div>
+      </footer>
+      <script type="text/javascript" src="{% static 'crypto/js/responsee.js' %}"></script>
+      <script type="text/javascript" src="{% static 'crypto/owl-carousel/owl.carousel.js' %}"></script>
+      <script type="text/javascript">
+         jQuery(document).ready(function($) {
+            var theme_slider = $("#owl-demo");
+            $("#owl-demo").owlCarousel({
+                navigation: false,
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                autoPlay: 6000,
+                addClassActive: true,
+             // transitionStyle: "fade",
+                singleItem: true
+            });
+            $("#owl-demo2").owlCarousel({
+                slideSpeed: 300,
+                autoPlay: true,
+                navigation: true,
+                navigationText: ["&#xf007","&#xf006"],
+                pagination: false,
+                singleItem: true
+            });
+        
+            // Custom Navigation Events
+            $(".next-arrow").click(function() {
+                theme_slider.trigger('owl.next');
+            })
+            $(".prev-arrow").click(function() {
+                theme_slider.trigger('owl.prev');
+            })     
+        }); 
+      </script>
+   </body>
+</html>

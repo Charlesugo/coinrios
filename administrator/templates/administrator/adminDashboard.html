@@ -1,0 +1,114 @@
+{% extends 'administrator/base.html' %}
+{% load static %}
+{% block title %} <title>Welcome {{ user }} | Frontline Exchange</title> {% endblock %}
+{% block navLinks %}
+<li class="nav-active">
+    <a href="#">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <span>Dashboard</span>
+    </a>
+</li>
+<li class="nav-parent">
+    <a>
+        <i class="text-info fa fa-bar-chart-o" aria-hidden="true"></i>
+        <span>CHANGE CRYPTO PRICES FOR</span>
+    </a>
+    <ul class="nav nav-children">
+        <li>
+            <a href="{% url 'administrator:bitcoinExchangeRates' %}">BITCOIN</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:ripple_exchange_rates' %}">RIPPLE</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:ethereum_exchange_rates' %}">ETHEREUM</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:perfect_money_exchange_rates' %}">PERFECT MONEY</a>
+        </li>
+    </ul>
+</li>
+<li class="nav-parent">
+    <a>
+        <i class="text-primary fa fa-arrow-right" aria-hidden="true"></i>
+        <span>BUY REQUESTS FOR</span>
+    </a>
+    <ul class="nav nav-children">
+        <li>
+            <a href="{% url 'administrator:bitcoin_buy_requests' %}">BITCOIN</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:ripple_buy_requests' %}">RIPPLE</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:ethereum_buy_requests' %}">ETHEREUM</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:perfect_money_buy_requests' %}">PERFECT MONEY</a>
+        </li>
+    </ul>
+</li>
+<li class="nav-parent">
+    <a>
+        <i class="text-info fa fa-arrow-left" aria-hidden="true"></i>
+        <span>SELL REQUESTS FOR</span>
+    </a>
+    <ul class="nav nav-children">
+        <li>
+            <a href="{% url 'administrator:bitCoin_sell_request' %}">BITCOIN</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:ripple_sell_request' %}">RIPPLE</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:ethereum_sell_request' %}">ETHEREUM</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:pm_sell_request' %}">PERFECT MONEY</a>
+        </li>
+    </ul>
+</li>
+<li>
+    <a href="{% url 'administrator:registered_users' %}">
+        <i class="text-primary fa fa-users" aria-hidden="true"></i>
+        <span>USERS</span>
+    </a>
+</li>
+<li>
+    <a href="{% url 'administrator:registered_user_profile' user.pk %}">
+        <i class="text-warning fa fa-user" aria-hidden="true"></i>
+        <span>MY PROFILE</span>
+    </a>
+</li>
+{% endblock %} {% block body %}
+<p class="lead text-center">Contact Form</p>
+<div class="table-responsive">
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Email</th>
+                <th scope="col">Name</th>
+                <th scope="col">Message</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fields in object_list %}
+            <tr>
+                <th scope="row">{{ fields.pk }}</th>
+                <td>{{ fields.email }}</td>
+                <td>{{ fields.full_name }}</td>
+                <td>{{ fields.message }}</td>
+                <td>
+                    <form method="post" action="{% url 'administrator:deleteContactForm' fields.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

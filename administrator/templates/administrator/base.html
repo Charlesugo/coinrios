@@ -1,0 +1,249 @@
+<!doctype html>
+<html class="fixed">
+	<head>
+        {% load static %}
+		<meta charset="UTF-8">
+        {% block title %} <title>Frontline | Dashboard</title> {% endblock %}
+
+		<meta name="keywords" content="HTML5 Admin Template" />
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">-->
+		<link rel="icon" href="{% static 'administrator/img/logo.png' %}" />
+		<link rel="stylesheet" href="{% static 'administrator/css/bootstrap-1.css' %}" />
+		<link rel="stylesheet" href="{% static 'administrator/css/font-awesome/css/font-awesome.css' %}" />
+		<link rel="stylesheet" href="{% static 'administrator/css/magnific-popup/magnific-popup.css' %}" />
+		<link rel="stylesheet" href="{% static 'administrator/css/theme.css' %}" />
+		<link rel="stylesheet" href="{% static 'administrator/css/skins/default.css' %}" />
+		<link rel="stylesheet" href="{% static 'administrator/css/hugoFramework.css' %}" />
+
+		<script src="{% static 'administrator/js/modernizr.js' %}"></script>
+	</head>
+	<body>
+    {% if user.is_authenticated %}
+        <section class="body">
+
+			<!-- start: header -->
+			<header class="header">
+				<div class="logo-container">
+					<a href="#" class="logo">
+						<p class="lead">Frontline eXchange</p>
+					</a>
+					<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+
+				<!-- start: search & user box -->
+				<div class="header-right">
+					<span class="separator"></span>
+
+					<ul class="notifications">
+						<!--<li>-->
+							<!--<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">-->
+								<!--<i class="fa fa-bell"></i>-->
+								<!--<span class="badge">3</span>-->
+							<!--</a>-->
+			<!---->
+							<!--<div class="dropdown-menu notification-menu">-->
+								<!--<div class="notification-title">-->
+									<!--<span class="pull-right label label-default">3</span>-->
+									<!--Alerts-->
+								<!--</div>-->
+			<!---->
+								<!--<div class="content">-->
+									<!--<ul>-->
+										<!--<li>-->
+											<!--<a href="#" class="clearfix">-->
+												<!--<div class="image">-->
+													<!--<i class="fa fa-thumbs-down bg-danger"></i>-->
+												<!--</div>-->
+												<!--<span class="title">Server is Down!</span>-->
+												<!--<span class="message">Just now</span>-->
+											<!--</a>-->
+										<!--</li>-->
+										<!--<li>-->
+											<!--<a href="#" class="clearfix">-->
+												<!--<div class="image">-->
+													<!--<i class="fa fa-lock bg-warning"></i>-->
+												<!--</div>-->
+												<!--<span class="title">User Locked</span>-->
+												<!--<span class="message">15 minutes ago</span>-->
+											<!--</a>-->
+										<!--</li>-->
+										<!--<li>-->
+											<!--<a href="#" class="clearfix">-->
+												<!--<div class="image">-->
+													<!--<i class="fa fa-signal bg-success"></i>-->
+												<!--</div>-->
+												<!--<span class="title">Connection Restaured</span>-->
+												<!--<span class="message">10/10/2014</span>-->
+											<!--</a>-->
+										<!--</li>-->
+									<!--</ul>-->
+			<!---->
+									<!--<hr />-->
+			<!---->
+									<!--<div class="text-right">-->
+										<!--<a href="#" class="view-more">View All</a>-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</li>-->
+					</ul>
+
+					<span class="separator"></span>
+
+					<div id="userbox" class="userbox">
+						<a href="#" data-toggle="dropdown">
+							<figure class="profile-picture">
+								<img src="{% static 'administrator/img/!logged-user.jpg' %}" alt="Logged User" class="img-circle" data-lock-picture="{% static 'administrator/img/!logged-user.jpg' %}"/>
+							</figure>
+							<div class="profile-info" data-lock-name="{{ user }}" data-lock-email="{{ user.email }}">
+                                <span class="name">Welcome <strong>{{ user }}</strong></span>
+								<!--<span class="role">administrator</span>-->
+							</div>
+
+							<i class="fa custom-caret"></i>
+						</a>
+
+						<div class="dropdown-menu">
+							<ul class="list-unstyled">
+								<li class="divider"></li>
+                                <li>
+                                    {% if user.is_registered_user %}
+                                    <a role="menuitem" tabindex="-1" href="{% url 'registered_user:user_profile' user.pk %}"><i class="fa fa-user"></i> My Profile</a>
+                                    {% else %}
+                                    <a role="menuitem" tabindex="-1" href="{% url 'administrator:registered_user_profile' user.pk %}"><i class="fa fa-user"></i> My Profile</a>
+                                    {% endif %}
+                                </li>
+								<li>
+									<a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock"></i> Lock Screen</a>
+								</li>
+                                <li>
+									<a role="menuitem" tabindex="-1" href="{% url 'crypto:landingPage' %}"><i class="fa fa-globe"></i> Visit Site</a>
+								</li>
+								<li>
+									<a role="menuitem" tabindex="-1" href="{% url 'logout' %}"><i class="fa fa-power-off"></i> Logout</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end: search & user box -->
+			</header>
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+				<aside id="sidebar-left" class="sidebar-left">
+
+					<div class="sidebar-header">
+						<div class="sidebar-title">
+							FRONTLINE EXCHANGE
+						</div>
+						<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+							<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+						</div>
+					</div>
+
+					<div class="nano">
+						<div class="nano-content">
+							<nav id="menu" class="nav-main" role="navigation">
+								<ul class="nav nav-main">
+                                    {% block navLinks %}
+									<li class="nav-active">
+										<a>
+											<i class="fa fa-home" aria-hidden="true"></i>
+											<span>Dashboard</span>
+										</a>
+									</li>
+									<li>
+										<a href="mailbox-folder.html">
+											<span class="pull-right label label-primary">182</span>
+											<i class="fa fa-usd" aria-hidden="true"></i>
+											<span>BUY</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="pull-right label label-primary">182</span>
+											<i class="fa fa-usd" aria-hidden="true"></i>
+											<span>SELL</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="text-warning fa fa-user" aria-hidden="true"></i>
+											<span>MY PROFILE</span>
+										</a>
+									</li>
+
+									<!--<li class="nav-parent">-->
+										<!--<a>-->
+											<!--<i class="fa fa-users" aria-hidden="true"></i>-->
+											<!--<span>Complete Users Registration</span>-->
+										<!--</a>-->
+										<!--<ul class="nav nav-children">-->
+											<!--<li>-->
+												<!--<a href="{% url 'create_admin' %}">Administrator</a>-->
+											<!--</li>-->
+											<!--<li>-->
+												<!--<a href="{% url 'create_registered_user' %}">Registered Users</a>-->
+											<!--</li>-->
+										<!--</ul>-->
+									<!--</li>-->
+							        {% endblock %}
+								</ul>
+							</nav>
+						</div>
+
+					</div>
+
+				</aside>
+				<!-- end: sidebar -->
+
+				<section role="main" class="content-body">
+					<header class="page-header">
+						<h2>Dashboard</h2>
+
+						<div class="right-wrapper pull-right">
+							<ol class="breadcrumbs">
+								<li>
+									<a>
+										<i class="fa fa-home"></i>
+									</a>
+								</li>
+								<li><span>Dashboard</span></li>
+							</ol>
+
+							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+						</div>
+					</header>
+                    {% block body %}
+
+					<!-- start: page -->
+
+				</section>
+			</div>
+            {% endblock %}
+		</section>
+
+    {% else %}
+        <h1>Sorry Please <a href="{% url 'login' %}">Login</a></h1>
+    {% endif %}
+		<!-- Vendor -->
+	{% block Js %}
+		<script src="{% static 'administrator/js/conversion.js' %}"></script>
+	{% endblock %}
+		<script src="{% static 'administrator/js/jquery.js' %}"></script>
+		<script src="{% static 'administrator/js/bootstrap.js' %}"></script>
+		<script src="{% static 'administrator/js/nanoscroller/nanoscroller.js' %}"></script>
+
+		<script src="{% static 'administrator/js/magnific-popup/magnific-popup.js' %}"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="{% static 'administrator/js/theme.js' %}"></script>
+		<script src="{% static 'administrator/js/theme.init.js' %}"></script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+{% extends 'administrator/base.html' %}
+{% block navLinks %}{% load static %}
+{% block title %} <title>{{ user }} - Profile</title> {% endblock %}
+<li>
+    <a href="{% url 'registered_user:dashboard' %}">
+        <i class="text-warning fa fa-usd" aria-hidden="true"></i>
+        <span>BUY</span>
+    </a>
+</li>
+<li>
+    <a href="{% url 'registered_user:sell' %}">
+        <i class="text-info fa fa-usd" aria-hidden="true"></i>
+        <span>SELL</span>
+    </a>
+</li>
+<li class="nav-active">
+    <a href="{% url 'registered_user:user_profile' user.pk %}">
+        <i class="text-warning fa fa-user" aria-hidden="true"></i>
+        <span>MY PROFILE</span>
+    </a>
+</li>
+{% endblock %} {% block body %}
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title text-center">My Profile</div>
+            </div>
+            <div class="panel-body">
+                <p class="lead">Username <span class="pull-right">{{ user.username }}</span></p>
+                <p class="lead">Full Name <span class="pull-right">{{ user.first_name }} {{ user.last_name }}</span></p>
+                <p class="lead">Address <span class="pull-right">{{ user.address }}</span></p>
+                <p class="lead">City <span class="pull-right">{{ user.city }}</span></p>
+                <p class="lead">State <span class="pull-right">{{ user.state }}</span></p>
+                <p class="lead">Country <span class="pull-right">{{ user.country }}</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

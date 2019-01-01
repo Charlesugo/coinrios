@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Unverified</title>
+    <link rel="stylesheet" href="{% static 'crypto/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/css/responsee.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/' %}css/template-style.css">
+</head>
+<body>
+<div class="container">
+    {% if user.is_authenticated and user.is_verified %}
+    <div class="line">
+        <h2 class="section-title">You have been verified</h2>
+        <div class="margin">
+            <div class="m-3 l-3">
+                <a href="{% url 'crypto:landingPage' %}" class="btn btn-primary text-white">Go back to home page</a>
+            </div>
+            <div class="s-12 m-6 l-6">
+                <div class="s-12 l-2">
+                    <div class="news-date">
+                        <p class="day">0</p><p class="month">HOURS</p>
+                    </div>
+                </div>
+                <div class="s-12 l-10">
+                    <div class="news-text">
+                        <h4 class="text-center">Welcome {{ user }} </h4>
+                        <p class="lead">
+                            Welcome to frontline exchange the Nigerian No. 1 exchanger.<br>
+                            Buy and sell coins in a minute.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="m-3 l-3"></div>
+        </div>
+        {% else %}
+        <h2 class="section-title">You have not been verified</h2>
+        <div class="margin">
+            <div class="m-3 l-3">
+                <a href="{% url 'crypto:landingPage' %}" class="btn btn-primary text-white">Go back to home page</a>
+            </div>
+            <div class="s-12 m-6 l-6">
+                <div class="s-12 l-2">
+                    <div class="news-date">
+                        <p class="day">24</p><p class="month">HOURS</p>
+                    </div>
+                </div>
+                <div class="s-12 l-10">
+                    <div class="news-text">
+                        <h4 class="text-center">Welcome {{ user }} </h4>
+                        <p class="lead">Hey {{ user }}, welcome to frontline exchange the Nigerian No. 1 exchanger.
+                            verification takes less than 24 hours
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="m-3 l-3"></div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>

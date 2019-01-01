@@ -1,0 +1,157 @@
+{% extends 'administrator/base.html' %}
+{% block navLinks %}
+{% load static %}
+{% block title %} <title>Welcome {{ user }} | Buy Crypto Currencies</title> {% endblock %}
+<li class="nav-active">
+    <a href="{% url 'registered_user:dashboard' %}">
+        <i class="text-warning fa fa-usd" aria-hidden="true"></i>
+        <span>BUY</span>
+    </a>
+</li>
+<li>
+    <a href="{% url 'registered_user:sell' %}">
+        <i class="text-info fa fa-usd" aria-hidden="true"></i>
+        <span>SELL</span>
+    </a>
+</li>
+<li>
+    <a href="{% url 'registered_user:user_profile' user.pk %}">
+        <i class="text-warning fa fa-user" aria-hidden="true"></i>
+        <span>MY PROFILE</span>
+    </a>
+</li>
+{% endblock %}
+{% block body %}
+{% if user.is_verified %}
+
+<div class="row">
+    <div class="col-md-6 col-lg-12 col-xl-6">
+        <div class="row">
+
+            {% comment %}
+            <strong>Name: </strong>{{ key }} <br>
+            <strong>Dollar Price: </strong>{{ value.USD.PRICE }} <br>
+            <strong>Naira Price: </strong>{{ value.NGN.PRICE }} <br>
+            <strong>Symbol2: </strong>{{ value.NGN.FROMSYMBOL }} <br>
+            <strong>Symbol: </strong>{{ value.USD.FROMSYMBOL }} <br>
+            <strong>Daily High: </strong>{{ value.USD.HIGHDAY }} <br>
+            <strong>Daily Low: </strong>{{ value.USD.LOWDAY }} <br>
+            {% endcomment %}
+            <div class="col-md-12 col-lg-6 col-xl-6">
+                <section class="panel panel-featured-left panel-featured-info">
+                    <div class="panel-body">
+                        <div class="widget-summary">
+                            <div class="widget-summary-col widget-summary-col-icon">
+                                <div class="summary-icon bg-primary">
+                                    <i class="fa fa-btc"></i>
+                                </div>
+                            </div>
+                            <div class="widget-summary-col">
+                                <div class="summary">
+                                    <h3 class="text-center">BITCOIN</h3>
+                                    <div class="info">
+                                        <strong class="lead">Buy {{ btc_price }}| Sell {{ btc_sell_price }}</strong><br>
+                                    </div>
+                                </div>
+                                <div class="summary-footer">
+                                    <a href="{% url 'registered_user:bitcoin' user.pk %}" class="hugoBtn btn-primary pull-left">Buy BTC Now</a>
+                                    <a href="{% url 'registered_user:sell_bitcoin' user.pk %}" class="hugoBtn btn-success pull-right">Sell BTC Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-md-12 col-lg-6 col-xl-6">
+                <section class="panel panel-featured-left panel-featured-info">
+                    <div class="panel-body">
+                        <div class="widget-summary">
+                            <div class="widget-summary-col widget-summary-col-icon">
+                                <div class="summary-icon bg-primary">
+                                    XRP
+                                </div>
+                            </div>
+                            <div class="widget-summary-col">
+                                <div class="summary">
+                                    <h3 class="text-center">RIPPLE</h3>
+                                    <div class="info">
+                                        <strong class="lead">BUY {{ ripple_price }}| SELL {{ xrp_sell_price }}</strong><br>
+                                    </div>
+                                </div>
+                                <div class="summary-footer">
+                                    <a href="{% url 'registered_user:ripple' user.pk %}" class="hugoBtn btn-primary pull-left">Buy XRP Now</a>
+                                    <a href="{% url 'registered_user:sell_ripple' user.pk %}" class="hugoBtn btn-success pull-right">Sell XRP Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-md-12 col-lg-6 col-xl-6">
+                <section class="panel panel-featured-left panel-featured-info">
+                    <div class="panel-body">
+                        <div class="widget-summary">
+                            <div class="widget-summary-col widget-summary-col-icon">
+                                <div class="summary-icon bg-primary">
+                                    <!--<img src="{% static 'administrator/img/ethereum.png' %}" width="70%">-->
+                                    ETH
+                                </div>
+                            </div>
+                            <div class="widget-summary-col">
+                                <div class="summary">
+                                    <h3 class="text-center">ETHEREUM</h3>
+                                    <div class="info">
+                                        <strong class="lead">BUY {{ ethereum_price }}| SELL {{ eth_sell_price }}</strong><br>
+                                    </div>
+                                </div>
+                                <div class="summary-footer">
+                                    <a href="{% url 'registered_user:ethereum' user.pk %}" class="hugoBtn btn-primary pull-left">Buy ETH Now</a>
+                                    <a href="{% url 'registered_user:sell_ethereum' user.pk %}" class="hugoBtn btn-success pull-right">Sell ETH Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-md-12 col-lg-6 col-xl-6">
+                <section class="panel panel-featured-left panel-featured-info">
+                    <div class="panel-body">
+                        <div class="widget-summary">
+                            <div class="widget-summary-col widget-summary-col-icon">
+                                <div class="summary-icon bg-primary">
+                                    PM
+                                </div>
+                            </div>
+                            <div class="widget-summary-col">
+                                <div class="summary">
+                                    <h3 class="text-center">PERFECT MONEY</h3>
+                                    <div class="info">
+                                        <strong class="lead">BUY {{ perfect_money_price }}| SELL {{ pm_sell_price }}</strong><br>
+                                    </div>
+                                </div>
+                                <div class="summary-footer">
+                                    <a href="{% url 'registered_user:perfect_money' user.pk %}" class="hugoBtn btn-primary pull-left">Buy PM Now</a>
+                                    <a href="{% url 'registered_user:sell_perfect_money' user.pk %}" class="hugoBtn btn-success pull-right">Sell PM Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <input id="p" type="hidden" value="{{ btc_price }}">
+            <script>
+                var price = document.getElementById('p').value;
+                var a = price.substr(4);
+                var b = parseFloat(a);
+            </script>
+        </div>
+    </div>
+</div>
+{% else %}
+<h1>You are not Verified Yet</h1>
+{% endif %}
+{% endblock %}
+

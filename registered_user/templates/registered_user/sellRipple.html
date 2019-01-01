@@ -1,0 +1,47 @@
+{% extends 'administrator/base.html' %}
+{% block navLinks %}{% load static %}
+{% block title %} <title>Welcome {{ user }} | Sell Ripple</title> {% endblock %}
+<li>
+    <a href="{% url 'registered_user:dashboard' %}">
+        <i class="text-warning fa fa-usd" aria-hidden="true"></i>
+        <span>BUY</span>
+    </a>
+</li>
+<li class="nav-active">
+    <a href="{% url 'registered_user:sell' %}">
+        <i class="text-info fa fa-usd" aria-hidden="true"></i>
+        <span>SELL</span>
+    </a>
+</li>
+<li>
+    <a href="{% url 'registered_user:user_profile' user.pk %}">
+        <i class="text-warning fa fa-user" aria-hidden="true"></i>
+        <span>MY PROFILE</span>
+    </a>
+</li>
+{% endblock %} {% block body %}
+
+<div class="row">
+    <div class="col-md-12 col-lg-6 col-xl-">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title text-center">SELL RIPPLE</div>
+            </div>
+            <div class="panel-body">
+                <form method="post">
+                    {% csrf_token %} {{ form }}<br>
+                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                </form>
+                <!--<input type="hidden" id="btcDollarPrice" value="4000">-->
+                <!--<input type="hidden" id="btcNGNPrice" value="1460000">-->
+                <input type="hidden" id="ripplePrice" value="{{ xrp_sell_price }}">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block Js %}
+        <script src="{% static 'administrator/js/rippleSaleConversion.js' %}"></script>
+{% endblock %}

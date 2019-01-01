@@ -1,0 +1,113 @@
+{% extends 'administrator/base.html' %}
+{% block navLinks %}{% load static %}
+{% block title %} <title>Welcome {{ user }} | Ripple Exchange Rates</title> {% endblock %}
+<li>
+    <a href="{% url 'administrator:adminDashboard' %}">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <span>Dashboard</span>
+    </a>
+</li>
+<li class="nav-parent nav-active">
+    <a>
+        <i class="text-info fa fa-bar-chart-o" aria-hidden="true"></i>
+        <span>CHANGE CRYPTO PRICES FOR</span>
+    </a>
+    <ul class="nav nav-children">
+        <li>
+            <a href="{% url 'administrator:bitcoinExchangeRates' %}">BITCOIN</a>
+        </li>
+        <li class="nav-active">
+            <a href="{% url 'administrator:ripple_exchange_rates' %}">RIPPLE</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:ethereum_exchange_rates' %}">ETHEREUM</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:perfect_money_exchange_rates' %}">PERFECT MONEY</a>
+        </li>
+    </ul>
+</li>
+<li class="nav-parent">
+    <a>
+        <i class="text-primary fa fa-arrow-right" aria-hidden="true"></i>
+        <span>BUY REQUESTS FOR</span>
+    </a>
+    <ul class="nav nav-children">
+        <li>
+            <a href="{% url 'administrator:bitcoin_buy_requests' %}">BITCOIN</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:ripple_buy_requests' %}">RIPPLE</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:ethereum_buy_requests' %}">ETHEREUM</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:perfect_money_buy_requests' %}">PERFECT MONEY</a>
+        </li>
+    </ul>
+</li>
+<li class="nav-parent">
+    <a>
+        <i class="text-info fa fa-arrow-left" aria-hidden="true"></i>
+        <span>SELL REQUESTS FOR</span>
+    </a>
+    <ul class="nav nav-children">
+        <li>
+            <a href="{% url 'administrator:bitCoin_sell_request' %}">BITCOIN</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:ripple_sell_request' %}">RIPPLE</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:ethereum_sell_request' %}">ETHEREUM</a>
+        </li>
+        <li>
+            <a href="{% url 'administrator:pm_sell_request' %}">PERFECT MONEY</a>
+        </li>
+    </ul>
+</li>
+<li>
+    <a href="{% url 'administrator:registered_users' %}">
+        <i class="text-primary fa fa-users" aria-hidden="true"></i>
+        <span>USERS</span>
+    </a>
+</li>
+<li>
+    <a href="{% url 'administrator:registered_user_profile' user.pk %}">
+        <i class="text-warning fa fa-user" aria-hidden="true"></i>
+        <span>MY PROFILE</span>
+    </a>
+</li>
+{% endblock %} {% block body %}
+
+<p class="lead text-center">Change Ripple Exchange Rates</p>
+<div class="row">
+    <div class="col-md-12 col-lg-6 col-xl-">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">CHANGE RIPPLE BUY PRICE (NGN-ONLY)</div>
+            </div>
+            <div class="panel-body">
+            {% for fields in object_list %}
+            	<a class="lead" href="{% url 'administrator:update_ripple_price' fields.pk %}">Buy Price</a>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-lg-6 col-xl-">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">CHANGE RIPPLE SELL PRICE (NGN-ONLY)</div>
+            </div>
+            <div class="panel-body">
+                {% for fields in object_list %}
+            	<a class="lead" href="{% url 'administrator:update_ripple_sell_price' fields.pk %}">Buy Price</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

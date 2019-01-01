@@ -1,0 +1,47 @@
+{% extends 'administrator/base.html' %}
+{% block navLinks %}
+    <li class="nav-active">
+        <a href="{% url 'registered_user:dashboard' %}">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+    <li>
+        <a href="mailbox-folder.html">
+            <span class="pull-right label label-primary">182</span>
+            <i class="fa fa-usd" aria-hidden="true"></i>
+            <span>BUY</span>
+        </a>
+    </li>
+    <li>
+        <a href="mailbox-folder.html">
+            <span class="pull-right label label-primary">182</span>
+            <i class="fa fa-usd" aria-hidden="true"></i>
+            <span>SELL</span>
+        </a>
+    </li>
+    {% endblock %}
+{% block body %}
+
+    <div class="row">
+        <div class="panel panel-default col-md-6">
+            <div class="panel-heading">
+                <h4 class="text-center">Verify and complete registration of Administrator</h4>
+            </div>
+            <div class="panel-body">
+                <a href="{% url 'create_admin' %}">Administrator</a>
+            </div>
+        </div>
+
+        <div class="panel panel-default col-md-6">
+            <div class="panel-heading">
+                <h4 class="text-center">Verify and complete registration of Registered User</h4>
+            </div>
+            <div class="panel-body">
+                <a href="{% url 'create_registered_user' %}">Registered User</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
