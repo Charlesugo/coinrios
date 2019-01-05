@@ -2,54 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5158a6de-aea4-4b3f-b727-952ff2e04f55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/static/administrator/css/bootstrap-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/css/bootstrap1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/templates/administrator/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/templates/administrator/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/css/bootstrap-1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/css/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/css/components.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/css/icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/css/icons.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/css/responsee.css" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/css/responsee.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/css/template-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/css/template-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/font/Simple-Line-Icons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/font/Simple-Line-Icons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/font/Simple-Line-Icons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/font/Simple-Line-Icons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/font/mfglabsiconset-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/font/mfglabsiconset-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/font/mfglabsiconset-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/font/mfglabsiconset-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/Untitled-2-Recovered.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/about.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/client1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/client2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/client3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/contact.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/first.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/por1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/por2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/por3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/por4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/por5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/por6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/por7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/premium-features.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/pricing.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/second.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/img/third.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/js/jquery-1.8.3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/js/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/js/jquery-ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/js/modernizr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/js/responsee.js" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/js/responsee.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/js/template-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/js/template-scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/owl-carousel/AjaxLoader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/owl-carousel/AjaxLoader.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/owl-carousel/grabbing.png" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/owl-carousel/grabbing.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/owl-carousel/owl.carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/owl-carousel/owl.carousel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/owl-carousel/owl.carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/owl-carousel/owl.carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/owl-carousel/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/owl-carousel/owl.carousel.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/static/crypto/owl-carousel/owl.theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/static/administrator/owl-carousel/owl.theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/templates/crypto/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/crypto/templates/crypto/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/static/administrator/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/static/administrator/css/bootstrap1.css" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,13 +23,15 @@
         <counts>
           <entry key="MD" value="1" />
           <entry key="Procfile" value="3" />
-          <entry key="css" value="5" />
+          <entry key="css" value="8" />
           <entry key="env" value="2" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="8" />
+          <entry key="jpg" value="1" />
           <entry key="js" value="1" />
           <entry key="json" value="2" />
-          <entry key="md" value="1" />
+          <entry key="md" value="2" />
+          <entry key="png" value="1" />
           <entry key="py" value="7" />
           <entry key="txt" value="7" />
           <entry key="windows" value="3" />
@@ -83,11 +39,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="5" />
+          <entry key="CSS" value="8" />
           <entry key="HTML" value="8" />
+          <entry key="Image" value="2" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="1" />
-          <entry key="Markdown" value="2" />
+          <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="16" />
           <entry key="Python" value="7" />
         </counts>
@@ -110,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crypto/templates/crypto/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="7" column="52" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="52" />
+            <state relative-caret-position="260">
+              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -122,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/administrator/templates/administrator/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="11" column="55" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="55" />
+            <state relative-caret-position="494">
+              <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -142,12 +99,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../python-getting-started/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="308">
-                <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="33" />
+              <first_editor relative-caret-position="360">
+                <caret line="17" column="33" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="33" />
               </first_editor>
               <second_editor />
             </state>
@@ -173,7 +130,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../python-getting-started" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -185,8 +142,8 @@
         <option value="$PROJECT_DIR$/app.json" />
         <option value="$PROJECT_DIR$/../python-getting-started/hello/static/hello/style.css" />
         <option value="$PROJECT_DIR$/../python-getting-started/hello/templates/base.html" />
-        <option value="$PROJECT_DIR$/administrator/templates/administrator/base.html" />
         <option value="$PROJECT_DIR$/crypto/templates/crypto/index.html" />
+        <option value="$PROJECT_DIR$/administrator/templates/administrator/base.html" />
       </list>
     </option>
   </component>
@@ -208,6 +165,32 @@
             <path>
               <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
               <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
+              <item name="administrator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
+              <item name="administrator" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
+              <item name="administrator" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="administrator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
+              <item name="administrator" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="administrator" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -410,16 +393,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../python-getting-started/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="308">
-            <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="33" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
@@ -443,17 +416,58 @@
     <entry file="file://$PROJECT_DIR$/administrator/static/administrator/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/templates/administrator/base.html">
+    <entry file="file://$PROJECT_DIR$/crypto/templates/crypto/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="55" />
+        <state relative-caret-position="260">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crypto/templates/crypto/index.html">
+    <entry file="file://$PROJECT_DIR$/administrator/templates/administrator/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="52" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="52" />
+        <state relative-caret-position="494">
+          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/staticfiles/admin/css/vendor/select2/select2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11629">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/staticfiles/admin/css/vendor/select2/LICENSE-SELECT2.7cf1de939f3b.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/staticfiles/admin/css/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/staticfiles/administrator/img/!logged-user.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/staticfiles/administrator/img/ethereum.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/staticfiles/administrator/css/bootstrap.d26ecc887c12.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python-getting-started/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="360">
+            <caret line="17" column="33" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
