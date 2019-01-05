@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5158a6de-aea4-4b3f-b727-952ff2e04f55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/administrator/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto/templates/crypto/index.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +16,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="6" />
-          <entry key="html" value="1" />
+          <entry key="html" value="2" />
           <entry key="py" value="6" />
           <entry key="txt" value="1" />
         </counts>
@@ -23,18 +24,20 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="6" />
-          <entry key="HTML" value="1" />
+          <entry key="HTML" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="html" value="2" />
           <entry key="py" value="79" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="HTML" value="2" />
           <entry key="Python" value="79" />
         </counts>
       </usages-collector>
@@ -60,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/administrator/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="208">
@@ -68,6 +71,15 @@
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crypto/templates/crypto/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="8" column="68" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -116,13 +128,13 @@
         <option value="$PROJECT_DIR$/app.json" />
         <option value="$PROJECT_DIR$/../python-getting-started/hello/static/hello/style.css" />
         <option value="$PROJECT_DIR$/../python-getting-started/hello/templates/base.html" />
-        <option value="$PROJECT_DIR$/crypto/templates/crypto/index.html" />
         <option value="$PROJECT_DIR$/administrator/templates/administrator/base.html" />
         <option value="$PROJECT_DIR$/crypto/static/crypto/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/administrator/static/administrator/css/bootstrap-1.css" />
         <option value="$PROJECT_DIR$/administrator/static/administrator/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/frontlineExchange/settings.py" />
         <option value="$PROJECT_DIR$/administrator/admin.py" />
+        <option value="$PROJECT_DIR$/crypto/templates/crypto/index.html" />
       </list>
     </option>
   </component>
@@ -149,7 +161,41 @@
             <path>
               <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
               <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
-              <item name="administrator" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
@@ -167,6 +213,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\CHARLESISAAC\Desktop\frontlineExchange\crypto\static\crypto\css" />
       <recent name="C:\Users\CHARLESISAAC\Desktop\frontlineExchange" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -239,13 +286,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/runtime.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crypto/templates/crypto/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../python-getting-started/gettingstarted/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -329,6 +369,13 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypto/templates/crypto/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="68" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
         </state>
       </provider>
     </entry>
