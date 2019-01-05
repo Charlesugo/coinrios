@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5158a6de-aea4-4b3f-b727-952ff2e04f55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/crypto/templates/crypto/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/crypto/templates/crypto/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="5158a6de-aea4-4b3f-b727-952ff2e04f55" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +29,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="2" />
-          <entry key="py" value="79" />
+          <entry key="py" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="Python" value="79" />
+          <entry key="Python" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -50,11 +48,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontlineExchange/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+            <state relative-caret-position="184">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="12" />
               <folding>
                 <element signature="e#318#327#0" expanded="true" />
               </folding>
@@ -74,7 +72,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crypto/templates/crypto/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="11299">
@@ -131,13 +129,13 @@
         <option value="$PROJECT_DIR$/crypto/static/crypto/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/administrator/static/administrator/css/bootstrap-1.css" />
         <option value="$PROJECT_DIR$/administrator/static/administrator/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/frontlineExchange/settings.py" />
         <option value="$PROJECT_DIR$/administrator/admin.py" />
         <option value="$PROJECT_DIR$/crypto/templates/crypto/index.html" />
+        <option value="$PROJECT_DIR$/frontlineExchange/settings.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="542" />
     <option name="y" value="72" />
     <option name="width" value="781" />
@@ -156,45 +154,6 @@
             <path>
               <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
               <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
-              <item name="crypto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
-              <item name="crypto" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
-              <item name="crypto" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="crypto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
-              <item name="crypto" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="crypto" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
-              <item name="crypto" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
-              <item name="crypto" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="crypto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
@@ -248,6 +207,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -350,16 +310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontlineExchange/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
-          <folding>
-            <element signature="e#318#327#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/administrator/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -374,6 +324,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11299">
           <caret line="452" column="7" selection-start-line="452" selection-start-column="7" selection-end-line="452" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontlineExchange/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="12" />
+          <folding>
+            <element signature="e#318#327#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
