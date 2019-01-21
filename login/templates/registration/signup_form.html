@@ -4,35 +4,33 @@
     {% load static %}
     <meta charset="UTF-8">
     <title>Frontline Exchange Registration Form</title>
-    <link rel="stylesheet" href="{% static 'administrator/css/bootstrap-1.css' %}" />
+    <link rel="stylesheet" href="{% static 'crypto/css/bootstrap.css' %}" />
     <link rel="stylesheet" href="{% static 'administrator/css/hugoFramework.css' %}" />
 </head>
 <body style="background-color:#ecedf0;">
 <br><br><br><br>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 text-center">
-                <a href="{% url 'crypto:landingPage' %}" class="hugoBtn btn-primary">Go back to home page</a>
-                <br><br>
-            </div>
-            <div class="col-md-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div class="panel-title text-center">FRONTLINE EXCHANGE REGISTRATION FORM</div>
-                    </div>
-                    <div class="panel-body">
+    <div class="container-fluid">
+        <div class="text-center">
+            <a href="{% url 'crypto:landingPage' %}" class="hugoBtn btn-primary">Go back to home page</a>
+            <br><br>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8 col-md-5">
+                <div class="card">
+                    <div class="card-header cardHeader">COIN RIOS REGISTRATION FORM</div>
+                    <div class="card-body cardBody">
                         <form method="post" enctype="multipart/form-data">
                             {% csrf_token %}
-                            {{ form.as_p }}<br>
-                            <button class="btn btn-primary pull-right" type="submit">Register</button>
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-primary pull-right">Register</button>
+                            <!--<a href="{% url 'login' %}" class="float-right btn btn-outline-info">Login</a>-->
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3"></div>
         </div>
-        <br><br><br><br>
     </div>
+
     <script src="{% static 'administrator/js/jquery.js' %}"></script>
     <script src="{% static 'administrator/js/bootstrap.js' %}"></script>
 </body>

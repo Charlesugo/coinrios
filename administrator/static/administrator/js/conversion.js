@@ -15,15 +15,15 @@ volume.setAttribute('placeholder', 'Bitcoin Volume');
 
 // this is for converting from ngn to usd
 ngn.onkeyup = function() {
-        var ngnBuyRate = bitPrice;
-        var ngnValue = ngn.value / ngnBuyRate;
-        usd.value = ngnValue.toFixed(2);
-        // for the volume
-        var volumeFormula = parseFloat(ngn.value) / parseFloat(btcNGNPrice.value);
-        volume.value = volumeFormula;
+    var ngnBuyRate = bitPrice;
+    var ngnValue = ngn.value / ngnBuyRate;
+    usd.value = ngnValue.toFixed(2);
+    // for the volume
+    var volumeFormula = parseFloat(ngn.value) / parseFloat(btcNGNPrice.value);
+    volume.value = volumeFormula;
 
-    }
-    // this is for converting from usd to ngn
+}
+// this is for converting from usd to ngn
 usd.onkeyup = function() {
     var ngnBuyRate = bitPrice;
     var usdValue = usd.value * ngnBuyRate;

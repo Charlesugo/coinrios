@@ -4,5 +4,8 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="simple-ajax-crud-master" />
+    <orderEntry type="module" module-name="bookstore" />
+    <orderEntry type="module" module-name="chat" />
   </component>
 </module>
