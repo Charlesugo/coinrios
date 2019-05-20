@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../FoodApp/.idea/FoodApp.iml" filepath="$PROJECT_DIR$/../FoodApp/.idea/FoodApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../FoodDelivery/.idea/FoodDelivery.iml" filepath="$PROJECT_DIR$/../FoodDelivery/.idea/FoodDelivery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Food-Ordering-Restaurant-Django-Webapp-master/Food-Ordering-Restaurant-Django-Webapp-master/SevenSpicesWebsite/.idea/SevenSpicesWebsite.iml" filepath="$PROJECT_DIR$/../Food-Ordering-Restaurant-Django-Webapp-master/Food-Ordering-Restaurant-Django-Webapp-master/SevenSpicesWebsite/.idea/SevenSpicesWebsite.iml" />
       <module fileurl="file://$USER_HOME$/Downloads/Compressed/bookstore/.idea/bookstore.iml" filepath="$USER_HOME$/Downloads/Compressed/bookstore/.idea/bookstore.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Django/chat/.idea/chat.iml" filepath="$PROJECT_DIR$/../Django/chat/.idea/chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Django/e_portal-1/.idea/e_portal.iml" filepath="$PROJECT_DIR$/../Django/e_portal-1/.idea/e_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../foodtasker-master_2/.idea/foodtasker-master_2.iml" filepath="$PROJECT_DIR$/../foodtasker-master_2/.idea/foodtasker-master_2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/frontlineExchange.iml" filepath="$PROJECT_DIR$/.idea/frontlineExchange.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Django/horizon/.idea/horizon.iml" filepath="$PROJECT_DIR$/../Django/horizon/.idea/horizon.iml" />
       <module fileurl="file://$USER_HOME$/Downloads/Compressed/simple-ajax-crud-master/simple-ajax-crud-master/.idea/simple-ajax-crud-master.iml" filepath="$USER_HOME$/Downloads/Compressed/simple-ajax-crud-master/simple-ajax-crud-master/.idea/simple-ajax-crud-master.iml" />
     </modules>
   </component>

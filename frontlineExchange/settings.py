@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'frontlineExchange.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'frontline_prod',
+        'USER': 'u_frontline',
+        'PASSWORD': 'Frontline247',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
