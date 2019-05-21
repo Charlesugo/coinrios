@@ -1,4 +1,4 @@
 django
 gunicorn
 requests
-django-heroku
+psycopg2-binary
