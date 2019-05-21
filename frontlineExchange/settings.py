@@ -26,7 +26,7 @@ SECRET_KEY = '-+-3^&j_&!4xo8&cznj(8z&uit#qxr$hwc89%l@kc(yr0_%()('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['206.81.8.29']
 
 
 # Application definition
@@ -83,8 +83,8 @@ WSGI_APPLICATION = 'frontlineExchange.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'frontline_prod',
-        'USER': 'u_frontline',
+        'NAME': 'coinrios_db',
+        'USER': 'frontline_u',
         'PASSWORD': 'Frontline247',
         'HOST': 'localhost',
         'PORT': '',
