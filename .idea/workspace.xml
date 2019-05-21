@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/../FoodApp/restaurant/models.py" description="from login.models import User" line="1" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5158a6de-aea4-4b3f-b727-952ff2e04f55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontlineExchange/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/frontlineExchange/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="5158a6de-aea4-4b3f-b727-952ff2e04f55" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,16 +105,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontlineExchange/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
+            <state relative-caret-position="474">
               <caret line="145" column="35" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontlineExchange/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-261">
@@ -172,6 +169,7 @@
       <find>_set</find>
       <find>restaurant_profile</find>
       <find>verif</find>
+      <find>whitenoise</find>
     </findStrings>
     <replaceStrings>
       <replace>website</replace>
@@ -259,11 +257,6 @@
           <expand>
             <path>
               <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frontlineExchange" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
               <item name="frontlineExchange" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -715,19 +708,19 @@
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontlineExchange/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="145" column="35" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontlineExchange/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-261">
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontlineExchange/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="145" column="35" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="35" />
         </state>
       </provider>
     </entry>
