@@ -91,7 +91,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'coinrios_db',
-        'USER': 'frontline_u',
+        'USER': 'frontline_db_user',
         'PASSWORD': 'Frontline247',
         'HOST': 'localhost',
         'PORT': '',
