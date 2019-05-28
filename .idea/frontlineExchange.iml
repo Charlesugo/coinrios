@@ -13,5 +13,6 @@
     <orderEntry type="module" module-name="FoodDelivery" />
     <orderEntry type="module" module-name="e_portal" />
     <orderEntry type="module" module-name="FoodApp" />
+    <orderEntry type="module" module-name="eCommerce-master" />
   </component>
 </module>
