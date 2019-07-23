@@ -1,28 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <title>Frontline Exchange Registration Form</title>
-    <link rel="stylesheet" href="{% static 'crypto/css/bootstrap.css' %}" />
-    <link rel="stylesheet" href="{% static 'administrator/css/hugoFramework.css' %}" />
-</head>
-<body style="background-color:#ecedf0;">
-<br><br><br><br>
+{% extends 'crypto/index.html' %}
+{% load static %}
+{% block title %} Registration Form {% endblock %}
+{% block body %}
+<link rel="stylesheet" href="{% static 'administrator/css/hugoFramework.css' %}" />
+<style>
+    body{background: #f9f9f9;}
+</style>
+<br><br><br><br><br><br>
     <div class="container-fluid">
-        <div class="text-center">
-            <a href="{% url 'crypto:landingPage' %}" class="hugoBtn btn-primary">Go back to home page</a>
-            <br><br>
-        </div>
         <div class="row justify-content-center">
-            <div class="col-12 col-sm-8 col-md-5">
-                <div class="card">
-                    <div class="card-header cardHeader">COIN RIOS REGISTRATION FORM</div>
+            {% if messages %}
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {% for message in messages %}
+                <strong{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</strong>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <div class="col-12 col-md-5">
+                <div class="card bg-white" style="border: solid 1px #cecdcd;">
+                    <div class="card-header cardHeader">REGISTRATION FORM</div>
                     <div class="card-body cardBody">
                         <form method="post" enctype="multipart/form-data">
                             {% csrf_token %}
                             {{ form.as_p }}
-                            <button type="submit" class="btn btn-primary pull-right">Register</button>
+                            <button type="submit" class="btn btn-primary btn-sm pull-right">Register</button>
                             <!--<a href="{% url 'login' %}" class="float-right btn btn-outline-info">Login</a>-->
                         </form>
                     </div>
@@ -30,9 +32,4 @@
             </div>
         </div>
     </div>
-
-    <script src="{% static 'administrator/js/jquery.js' %}"></script>
-    <script src="{% static 'administrator/js/bootstrap.js' %}"></script>
-</body>
-
-</html>
+{% endblock %}

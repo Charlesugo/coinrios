@@ -26,7 +26,7 @@ SECRET_KEY = '-+-3^&j_&!4xo8&cznj(8z&uit#qxr$hwc89%l@kc(yr0_%()('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['104.248.54.151']
+ALLOWED_HOSTS = ['67.207.87.246', '127.0.0.1', 'coinrios.com', 'www.coinrios.com']
 
 
 # Application definition
@@ -37,12 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.humanize',
     'django.contrib.staticfiles',
 
     'login',
     'crypto',
     'administrator',
     'registered_user',
+
+    'paystack'
 ]
 
 MIDDLEWARE = [
@@ -91,8 +94,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'coinrios_db',
-        'USER': 'frontline_db_user',
-        'PASSWORD': 'Frontline247',
+        'USER': 'ugo_db_user',
+        'PASSWORD': 'mynumber',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -153,3 +156,11 @@ STATIC_URL = "/static/"
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # django_heroku.settings(locals())
+if DEBUG:
+    PAYSTACK_PUBLIC_KEY = 'pk_test_48b15e2577e6764ead0d1f455fe50e8bf849a18e'
+    PAYSTACK_SECRET_KEY = 'sk_test_817907df7f1969adbb050d21b8dfa41344ac34cf'
+else:
+    PAYSTACK_PUBLIC_KEY = 'pk_live_a17b23b59730eb4f4dc1a788f649d9b47208fe2b'
+    PAYSTACK_SECRET_KEY = 'sk_live_5cbfc82ff2f4458423da75d3707227504f5e4b76'
+
+PAYSTACK_SUCCESS_URL = 'crypto:confirmed_payment'

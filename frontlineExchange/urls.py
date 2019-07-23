@@ -9,6 +9,8 @@ from login.views import administrator, registered_user, views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+    path("paystack", include(('paystack.urls', 'paystack'), namespace='paystack')),
+
     path('redirect/', views.redirect_base_on_role, name='redirect_base_on_role'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/signup/', views.CreateWhichUser.as_view(), name='select_user_to_create'),

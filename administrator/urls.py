@@ -3,8 +3,10 @@ from administrator import views
 
 app_name = 'administrator'
 urlpatterns = [
-    path('', views.ListOfContactForms.as_view(), name='adminDashboard'),
+    path('', views.admin_dashboard, name='adminDashboard'),
     path('delete-form/<pk>/', views.DeleteContactForm.as_view(), name='deleteContactForm'),
+    path('delete-buy-order/<pk>/', views.DeleteBuyOrders.as_view(), name='delete_buy_order'),
+    path('delete-sell-order/<pk>/', views.DeleteSellOrders.as_view(), name='delete_sell_order'),
 
     path('bitcoin-exchange-rates/', views.BitCoinExchange.as_view(), name='bitcoinExchangeRates'),
     path('ripple-exchange-rates/', views.RippleExchangeRates.as_view(), name='ripple_exchange_rates'),

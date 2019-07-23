@@ -5,6 +5,7 @@ app_name = 'registered_user'
 urlpatterns = [
     path('', views.Dashboard.as_view(), name='dashboard'),
     path('sell/', views.Sell.as_view(), name='sell'),
+    path('orders/', views.orders, name='orders'),
     # path('', views.dashboard, name='dashboard'),
 
     path('bitcoin-buy-price/', views.BitCoinBuyView.as_view(), name='bitcoin_buy_price'),

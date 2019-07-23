@@ -81,9 +81,78 @@
     </a>
 </li>
 {% endblock %} {% block body %}
+<p class="lead text-center">Buy Requests</p>
+<div class="table-responsive">
+    <table class="table table-hover table-striped" style="font-size: 16px;">
+        <thead>
+            <tr>
+                <th scope="col">User</th>
+                <th scope="col">Email</th>
+                <th scope="col">Coin</th>
+                <th scope="col">Amount Paid</th>
+                <th scope="col">Naira Value</th>
+                <th scope="col">Paid</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for buy_order in buy_orders %}
+            <tr>
+                <th scope="row">{{ buy_order.buy_user.username }}</th>
+                <th scope="row">{{ buy_order.buy_user.email }}</th>
+                <td>{{ buy_order.buy_coin }}</td>
+                <td>{{ buy_order.buy_amount_currency }} {{ buy_order.buy_amount }}</td>
+                <td>&#8358; {{ buy_order.buy_amount_in_ngn }}</td>
+                <td>{{ buy_order.paid }}</td>
+                <td>
+                    <form method="post" action="{% url 'administrator:delete_buy_order' buy_order.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<br><br>
+
+<p class="lead text-center">Sell Request</p>
+<div class="table-responsive">
+    <table class="table table-hover table-striped" style="font-size: 16px;">
+        <thead>
+            <tr>
+                <th scope="col">User</th>
+                <th scope="col">Email</th>
+                <th scope="col">Coin</th>
+                <th scope="col">For Sale</th>
+                <th scope="col">Naira Value</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sell_order in sell_orders %}
+            <tr>
+                <th scope="row">{{ sell_order.sell_user.username }}</th>
+                <th scope="row">{{ sell_order.sell_user.email }}</th>
+                <td>{{ sell_order.sell_coin }}</td>
+                <td>{{ sell_order.sell_amount_currency }} {{ sell_order.sell_amount }}</td>
+                <td>&#8358; {{ sell_order.sell_amount_in_ngn }}</td>
+                <td>
+                    <form method="post" action="{% url 'administrator:delete_sell_order' sell_order.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<br><br>
+
+
 <p class="lead text-center">Contact Form</p>
 <div class="table-responsive">
-    <table class="table table-hover table-striped">
+    <table class="table table-hover table-striped" style="font-size: 16px;">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -94,7 +163,7 @@
             </tr>
         </thead>
         <tbody>
-        {% for fields in object_list %}
+        {% for fields in contact_form %}
             <tr>
                 <th scope="row">{{ fields.pk }}</th>
                 <td>{{ fields.email }}</td>

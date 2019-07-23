@@ -47,7 +47,7 @@ class Dashboard(TemplateView):
         # Get crypto data
         # import requests
         # import json
-        # crypto_api_req = requests.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,XRP&syms=USD")
+        # crypto_api_req = requests.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,&tsyms=USD")
         # crypto_api = json.loads(crypto_api_req.content)
 
         # kwargs['cryptoCurrencies'] = "crypto_api"
@@ -79,6 +79,10 @@ class Sell(TemplateView):
         kwargs['eth_sell_price'] = str(eth_sell_price)
         kwargs['pm_sell_price'] = str(pm_sell_price)
         return super().get_context_data(**kwargs)
+
+
+def orders(request):
+    return render(request, 'registered_user/orders.html')
 
 
 @login_required

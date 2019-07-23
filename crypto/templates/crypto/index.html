@@ -1,453 +1,1419 @@
 <!DOCTYPE html>
-<html lang="en-US">
-   <head>
-       {% load static %}
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Coin Rios</title>
-      <link rel="stylesheet" href="{% static 'crypto/css/components.css' %}">
-      <link rel="stylesheet" href="{% static 'crypto/css/bootstrap.css' %}">
-      <link rel="stylesheet" href="{% static 'crypto/css/responsee.css' %}">
-      <link rel="stylesheet" href="{% static 'crypto/css/icons.css' %}">
-      <link rel="stylesheet" href="{% static 'crypto/owl-carousel/owl.carousel.css' %}">
-      <link rel="stylesheet" href="{% static 'crypto/owl-carousel/owl.teme.css' %}">
-      <!-- CUSTOM STYLE -->
-      <link rel="stylesheet" href="{% static 'crypto/' %}css/template-style.css">
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-      <script type="text/javascript" src="{% static 'crypto/js/jquery-1.8.3.min.js' %}"></script>
-      <script type="text/javascript" src="{% static 'crypto/js/jquery-ui.min.js' %}"></script>
-      <script type="text/javascript" src="{% static 'crypto/js/template-scripts.js' %}"></script>
-   </head>
-   <body class="size-1140">
-  	  <!-- PREMIUM FEATURES BUTTON -->
-  	  <!--<a target="_blank" class="hide-s" href="../template/onepage-premium-template/" style="position:fixed;top:130px;right:-14px;z-index:10;">-->
-          <!--<img src="{% static 'crypto/img/premium-features.png' %}" alt="">-->
-      <!--</a>-->
-      <!-- TOP NAV WITH LOGO -->
-      <header>
-         <div id="topbar">
-            <div class="line">
-               <div class="s-12 m-6 l-6">
-                  <p>CONTACT US: <strong>08000000</strong> | <strong>contact@domain.com</strong></p>
-               </div>
-               <div class="s-12 m-6 l-6">
-                  <div class="social right">
-                      <!--<a><i class="icon-facebook_circle"></i></a>-->
-                      <!--<a><i class="icon-twitter_circle"></i></a>-->
+{% load static %}
+<html  >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="coinrios.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{% static 'crypto/assets/images/mbr-122x90.jpg' %}" type="image/x-icon">
+    <meta name="description" content="">
+    <title>Coinrios |{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'crypto/assets/web/assets/coinrios-icons2/coinrios2.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/assets/web/assets/coinrios-icons/coinrios-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/assets/tether/tether.min.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/assets/bootstrap/css/bootstrap-grid.min.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/assets/bootstrap/css/bootstrap-reboot.min.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/assets/socicon/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/assets/dropdown/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/assets/animatecss/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/assets/theme/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'crypto/assets/coinrios/css/coinrios--additional.css' %}" type="text/css">
 
-                      <a href="{% url 'create_registered_user' %}"> Register</a>
-                      |||
-                      <a href="{% url 'login' %}">Login</a>|||
-                      {% if user.is_authenticated %}
-                        <a href="{% url 'registered_user:dashboard' %}">Dashboard</a>
-                      {% endif %}
-                  </div>
-               </div>
-            </div>  
-         </div> 
-         <nav>
-            <div class="line">
-               <div class="s-12 l-2">
-                   <!--<img src="{% static 'crypto/img/logo.png' %}">-->
-                   <p class="logo"><strong>Coin</strong>Rios</p>
-               </div>
-               <div class="top-nav s-12 l-10">
-                  <p class="nav-text">Menu</p>
-                  <ul class="right">
-                     <li class="active-item"><a href="#carousel">Home</a></li>
-                     <li><a href="#features">Coins</a></li>
-                     <li><a href="#about-us">About Us</a></li>
-                     <li><a href="#our-work">Our Work</a></li>
-                     <li><a href="#services">Services</a></li>
-                     <li><a href="#contact">Contact</a></li>
+</head>
+<body>
+    <section class="menu cid-rvfkMYnT0i" once="menu" id="menu2-d">
 
-                  </ul>
-               </div>
+
+      <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-         </nav>
-      </header>  
-      <section>
-         <!-- CAROUSEL --> 
-         <div id="carousel">
-            <div id="owl-demo" class="owl-carousel owl-theme">
-               <div class="item">
-                  <img src="{% static 'crypto/img/third.jpg' %}" alt="">
-                  <div class="line">
-                     <div class="text hide-s">
-                        <h2>The Nigerian No. 1 Exchanger</h2>
-                        <p>Buy and sell coins in a minute</p>
-                     </div>
-                  </div>
-               </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="{% url 'crypto:landingPage' %}">
+                        <img src="{% static 'crypto/assets/images/mbr-122x90.jpg' %}" alt="Coinrios" title="" style="height: 3.8rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4" href="{% url 'crypto:landingPage' %}">COINRIOS</a></span>
             </div>
-         </div>
-         <!-- FIRST BLOCK -->
-         <div id="first-block">
-            <div class="line">
-               <h1>Buy and Sell Coins Now</h1>
-               <div class="container center">
-                   <div class="row justify-content-center">
-                       <div class="col col-md-4">
-                            <a class="white-btn" href="{% url 'registered_user:dashboard' %}">Buy</a>
-                       </div>
-                       <div class="col col-md-4">
-                            <a class="white-btn" href="{% url 'registered_user:sell' %}">Sell</a>
-                       </div>
-                   </div>
-               </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link link text-secondary display-4" href="#">About Us</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link link text-secondary display-4" href="#">Contact Us</a>-->
+                <!--</li>-->
+                <li class="nav-item">
+                    <a class="nav-link link text-secondary display-4" href="{% url 'crypto:blog' %}">News</a>
+                </li>
+            </ul>
+            <div class="navbar-buttons mbr-section-btn">
+                {% if user.is_authenticated %}
+                <a class="btn btn-sm btn-secondary display-4" href="{% url 'registered_user:dashboard' %}">
+                    <span class="mbri-users mbr-iconfont mbr-iconfont-btn"></span> Welcome {{ user }}
+                </a>
+                {% else %}
+                <a class="btn btn-sm btn-secondary display-4" href="{% url 'login' %}">
+                    <span class="mbri-lock mbr-iconfont mbr-iconfont-btn"></span>Login
+                </a>
+                <a class="btn btn-sm btn-secondary display-4" href="{% url 'create_registered_user' %}">
+                    <span class="mbri-users mbr-iconfont mbr-iconfont-btn"></span>Sign Up
+                </a>
+                {% endif %}
+                <a class="btn btn-sm btn-primary display-4" href="tel:+234 8029111947">
+                    <span class="btn-icon mbri-mobile mbr-iconfont mbr-iconfont-btn"></span>0708 888 8068
+                </a>
             </div>
-         </div>
-         <!-- FEATURES -->
-         <div id="features">
-            <div class="container">
-               <div class="row">
-                  <div class="col col-md-6">
-                     <div class="card text-center">
-                        <div class="card-header bg-dark-blue text-white">
-                            BITCOIN
+        </div>
+    </nav>
+</section>
+{% block body %}
+<section class="engine"><a href="https://coinrios.com">Coinrios</a></section><section class="header12 cid-ruAXHjuoq8 mbr-fullscreen mbr-parallax-background" id="header12-b">
+
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(35, 35, 35);">
+    </div>
+
+    <div class="container">
+        {% if messages %}
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            {% for message in messages %}
+            <strong{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</strong>
+            {% endfor %}
+        </div>
+        {% endif %}
+            <div class="media-container">
+                <div class="col-md-12 align-center">
+                    <h1 class="mbr-section-title pb-3 mbr-white mbr-bold mbr-fonts-style display-2"><br><br>BUY AND SELL COINS IN MINUTES</h1>
+                    <div class="icons-media-container mbr-white">
+                        <div class="card col-12 col-md-6 col-lg-3">
+                            <div class="icon-block">
+                                <img src="{% static 'crypto/assets/images/bitcoin.png' %}">
+                            <!--<a href="https://coinrios.com">-->
+                                <!--<span class="mbr-iconfont mbri-credit-card"></span>-->
+                            <!--</a>-->
+                            </div>
+                            <h5 class="mbr-fonts-style display-5">
+                                <a href="{% url 'registered_user:dashboard' %}" class="text-success"><strong>BUY <span class="text-white">||</span></strong></a>
+                                <a href="{% url 'registered_user:sell' %}" class="text-success"><strong>SELL</strong></a>
+                            </h5>
                         </div>
-                        <div class="card-body">
-                            <i class="icon-tablet icon3x"></i>
-                            <div class="row">
-                                <div class="col col-sm-12 col-md-6">
-                                    <h5 class="card-title">BUY BITCOIN @ {{ btc_price }}</h5>
-                                    <a href="{% url 'registered_user:dashboard' %}" class="btn btn-primary text-white">BUY BITCOIN</a>
-                                </div>
-                                <div class="col col-sm-12 col-md-6">
-                                    <h5 class="card-title">SELL BITCOIN @ {{ btc_sell_price }}</h5>
-                                    <a href="{% url 'registered_user:sell' %}" class="btn btn-primary text-white">SELL BITCOIN</a>
-                                </div>
+
+                        <div class="card col-12 col-md-6 col-lg-3">
+                            <div class="icon-block">
+                                <img src="{% static 'crypto/assets/images/ethereum-whitebg.png' %}">
+                                <!--<a href="https://coinrios.com/">-->
+                                    <!--<span class="mbr-iconfont mobi-mbri-growing-chart mobi-mbri"></span>-->
+                                <!--</a>-->
+                            </div>
+                             <h5 class="mbr-fonts-style display-5">
+                                <a href="{% url 'registered_user:dashboard' %}" class="text-success"><strong>BUY <span class="text-white">||</span></strong></a>
+                                <a href="{% url 'registered_user:sell' %}" class="text-success"><strong>SELL</strong></a>
+                            </h5>
+                        </div>
+
+                        <div class="card col-12 col-md-6 col-lg-3">
+                            <div class="icon-block">
+                                <img src="{% static 'crypto/assets/images/litecoin.png' %}">
+                                <!--<a href="https://coinrios.com/">-->
+                                    <!--<span class="mbri-cash mbr-iconfont"></span>-->
+                                <!--</a>-->
+                            </div>
+                             <h5 class="mbr-fonts-style display-5">
+                                <a href="{% url 'registered_user:dashboard' %}" class="text-success"><strong>BUY <span class="text-white">||</span></strong></a>
+                                <a href="{% url 'registered_user:sell' %}" class="text-success"><strong>SELL</strong></a>
+                            </h5>
+                        </div>
+
+                        <div class="card col-12 col-md-6 col-lg-3">
+                            <div class="icon-block">
+                                <img src="{% static 'crypto/assets/images/perfect-money.png' %}">
+                                <!--<a href="https://coinrios.com/">-->
+                                    <!--<span class="mbri-cash mbr-iconfont"></span>-->
+                                <!--</a>-->
+                            </div>
+                             <h5 class="mbr-fonts-style display-5">
+                                <a href="{% url 'registered_user:dashboard' %}" class="text-success"><strong>BUY <span class="text-white">||</span></strong></a>
+                                <a href="{% url 'registered_user:sell' %}" class="text-success"><strong>SELL</strong></a>
+                            </h5>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
+        <a href="#next">
+            <i class="mbri-down mbr-iconfont"></i>
+        </a>
+    </div>
+</section>
+
+<section class="pricing-table2 cid-rvfrt49QEM" id="pricing-tables2-f">
+    <h1 class="text-center">Today's Rate</h1>
+    <p class="text-center">The best place to Buy and Sell Cryptocurrencies. Secure your Financial Future Today.</p><hr>
+    <div class="container">
+        <div class="media-container-row">
+
+            <div class="plan col-12 mx-2 my-2 justify-content-center favorite col-lg-6" style="max-width: inherit;">
+                <div class="plan-header text-center pt-5">
+                    <h3 class="plan-title mbr-fonts-style display-5">Coinrios Converter</h3>
+                </div>
+                <div class="plan-body">
+                    <div style="padding: 20px;">
+
+                        <ul class="item-info-tabs nav nav-justified" role="tablist">
+                            <li class="nav-item bg-danger tab-box">
+                                <a class="nav-link active" href="#buy" data-taget="#buy" role="tab" data-toggle="tab" aria-expanded="true">
+                                    <span class="text-white">Buy</span>
+                                </a>
+                            </li>
+                            <li class="nav-item bg-danger tab-box blur-div">
+                                <a class="nav-link" href="#sell" data-taget="#sell" role="tab" data-toggle="tab" aria-expanded="false">
+                                    <span class="text-white">Sell</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content calc-content" style="margin-bottom: 20px;">
+
+                            <div role="tabpanel" class="tab-pane active" id="buy" aria-expanded="true">
+                                <br>
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <div class="form-group buy-sc">
+                                        <select name="buy_coin" id="buy-currency" required class="form-control" style="height: 35px;">
+                                            <option value="0" diselected="">Select Currency</option>
+                                            <option value="BTC">Bitcoin</option>
+                                            <option value="PM">Perfect Money</option>
+                                            <!--<option value="CNY">Chinese Yuan</option>-->
+                                            <option value="LTC">Litecoin</option>
+                                            <option value="ETH">Ethereum</option>
+                                        </select>
+                                    </div>
+                                    <div class="price-divider buy-rate" style="display: none;">
+                                        <p style="color: rgb(51, 51, 51);font-weight: 500;font-size: 16px;margin-top: 20px;">
+                                            <b id="buy-api-price"></b>
+                                        </p>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="number" min="1" name="buy_amount" id="buy-input" step="0.0" class="form-control" placeholder="How much you want">
+                                        <div class="input-group-btn">
+                                            <select name="buy_amount_currency" id="buy-convert" style="height: 35px;width: 75px;">
+                                                <option value="USD">USD</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="price-divider">
+                                        <p style="color: rgb(51, 51, 51);font-weight: 500;font-size: 16px;margin-top: 20px;">
+                                            <b id="buy-price">USD 0 @ 0.00000 <!-- BTC --></b>
+                                        </p>
+                                    </div>
+
+                                    <div class="container-fluid" style="padding: 1px;">
+                                        <div class="row">
+                                            <div class="col-12 col-md-7">
+                                                <div class="input-group mb-3">
+                                                    <input type="text" id="buy-output" class="form-control" name="buy_amount_in_ngn" placeholder="0.0000" readonly="" aria-describedby="buy-addon">
+                                                    <div class="input-group-append">
+                                                      <!--<button class="btn btn-default" type="button">Naira</button>-->
+                                                        <span class="input-group-text" id="buy-addon">Naira</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-5"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mbr-section-btn py-4 pb-5">
+                                        <button type="submit" class="btn btn-secondary display-4">BUY NOW</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane" id="sell" aria-expanded="false">
+                                <br>
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <div class="form-group sell-sc">
+                                        <select name="sell_coin" id="sell-currency" class="form-control" style="height: 35px;">
+                                            <option value="0" diselected="">Select Currency</option>
+                                                <option value="BTC">Bitcoin</option>
+                                                <option value="PM">Perfect Money</option>
+                                                <option value="LTC">Litecoin</option>
+                                                <option value="ETH">Ethereum</option>
+                                        </select>
+                                    </div>
+                                    <div class="price-divider sell-rate" style="display: none;">
+                                        <p style="color: rgb(51, 51, 51);font-weight: 500;font-size: 16px;margin-top: 20px;">
+                                            <b id="sell-api-price"></b>
+                                        </p>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="number" id="sell-input" min="1" name="sell_amount" step="0.0" class="form-control" placeholder="How much you get">
+                                        <div class="input-group-btn">
+                                            <select name="sell_amount_currency" id="sell-convert" style="height: 35px;width: 75px;">
+                                                <option value="USD">USD</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="price-divider">
+                                        <p style="color: rgb(51, 51, 51);font-weight: 500;font-size: 16px;margin-top: 20px;">
+                                            <b id="sell-price">USD 0 @ 0.00000 <!-- BTC --></b>
+                                        </p>
+                                    </div>
+
+                                     <div class="container-fluid" style="padding: 1px;">
+                                        <div class="row">
+                                            <div class="col-12 col-md-7">
+                                                <div class="input-group mb-3">
+                                                    <input type="text" id="sell-output" name="sell_amount_in_ngn" class="form-control" placeholder="0.0000" readonly="" aria-describedby="sell-addon">
+                                                    <div class="input-group-append">
+                                                      <!--<button class="btn btn-default" type="button">Naira</button>-->
+                                                        <span class="input-group-text" id="sell-addon">Naira</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-5"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mbr-section-btn py-4 pb-5">
+                                        <button href="#" class="btn btn-secondary display-4">SELL NOW</button>
+                                    </div>
+
+                                </form>
                             </div>
                         </div>
-                     </div>
-                  </div>
 
-                  <div class="col col-md-6">
-                     <div class="card text-center">
-                        <div class="card-header bg-dark-blue text-white">
-                            RIPPLE
-                        </div>
-                        <div class="card-body">
-                            <i class="icon-isight icon3x"></i>
-                            <div class="row">
-                                <div class="col col-sm-12 col-md-6">
-                                    <h5 class="card-title">BUY RIPPLE @ {{ ripple_price }}</h5>
-                                    <a href="{% url 'registered_user:dashboard' %}" class="btn btn-primary text-white">BUY RIPPLE</a>
-                                </div>
-                                <div class="col col-sm-12 col-md-6">
-                                    <h5 class="card-title">SELL RIPPLE @ {{ xrp_sell_price }}</h5>
-                                    <a href="{% url 'registered_user:sell' %}" class="btn btn-primary text-white">SELL RIPPLE</a>
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                  </div>
-
-                   <br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-                  <div class="col col-md-6">
-                     <div class="card text-center">
-                        <div class="card-header bg-dark-blue text-white">
-                            ETHEREUM
-                        </div>
-                        <div class="card-body">
-                            <i class="icon-star icon3x"></i>
-                            <div class="row">
-                                <div class="col col-sm-12 col-md-6">
-                                    <h5 class="card-title">BUY ETHEREUM @ {{ ethereum_price }}</h5>
-                                    <a href="{% url 'registered_user:dashboard' %}" class="btn btn-primary text-white">BUY ETHEREUM</a>
-                                </div>
-                                <div class="col col-sm-12 col-md-6">
-                                    <h5 class="card-title">SELL ETHEREUM @ {{ eth_sell_price }}</h5>
-                                    <a href="{% url 'registered_user:sell' %}" class="btn btn-primary text-white">SELL ETHEREUM</a>
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                  </div>
-
-                   <div class="col col-md-6">
-                     <div class="card text-center">
-                        <div class="card-header bg-dark-blue text-white">
-                            PERFECT ETHEREUM
-                        </div>
-                        <div class="card-body">
-                            <i class="icon-heart icon3x"></i>
-                            <div class="row">
-                                <div class="col col-sm-12 col-md-6">
-                                    <h5 class="card-title">BUY PERFECT MONEY @ {{ perfect_money_price }}</h5>
-                                    <a href="{% url 'registered_user:dashboard' %}" class="btn btn-primary text-white">BUY PERFECT MONEY</a>
-                                </div>
-                                <div class="col col-sm-12 col-md-6">
-                                    <h5 class="card-title">SELL PERFECT MONEY @ {{ pm_sell_price }}</h5>
-                                    <a href="{% url 'registered_user:sell' %}" class="btn btn-primary text-white">SELL PERFECT MONEY</a>
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                  </div>
-
-               </div>
+                    </div>
+                </div>
             </div>
-         </div>
-         <!-- ABOUT US -->
-         <div id="about-us">
-            <div class="s-12 m-12 l-6 media-container">
-               <img src="{% static 'crypto/img/about.jpg' %}" alt="">
+
+            <div class="plan col-12 mx-2 my-2 favorite justify-content-center col-lg-3">
+                <div class="plan-header text-center pt-5">
+                    <img src="{% static 'crypto/assets/images/bitcoin.png' %}"><hr>
+                    <h3 class="plan-title text-secondary mbr-fonts-style display-5">BITCOIN</h3>
+                </div>
+                <div class="plan-body">
+                    <p class="text-center">BUY: &#8358;
+                        <span id="btc_buy_price">{{ btc_price.new_price }}0</span>| SELL: &#8358;
+                        <span id="btc_sell_price" >{{ btc_sell_price.new_price }}0</span>
+                    </p>
+                </div>
+
+                <div style="border: solid 10px #e4e4e4;"></div>
+
+                <div class="plan-header text-center pt-5">
+                    <img src="{% static 'crypto/assets/images/litecoin.png' %}"><hr>
+                    <h3 class="plan-title text-secondary mbr-fonts-style display-5">LITECOIN</h3>
+                </div>
+                <div class="plan-body">
+                    <p class="text-center">BUY: &#8358;
+                        <span id="ltc_buy_price">500.00</span> | &#8358;SELL:
+                        <span id="ltc_sell_price" >505.00</span>
+                    </p>
+                </div>
             </div>
-            <article class="s-12 m-12 l-6">
-               <h2>We are<br> Crypto Currency<br> Heroes</h2>
-               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet 
-                 dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
-                 lobortis nisl ut aliquip ex ea commodo consequat.
-               </p>
-               <div class="about-us-icons">
-                  <i class="icon-paperplane_ico"></i> <i class="icon-trophy"></i> <i class="icon-clock"></i>
-               </div>
-            </article>
-         </div>
-         <!-- OUR WORK -->
-         <div id="our-work">
-            <div class="line">
-               <h2 class="section-title">Our Work</h2>
-               <div class="tabs">
-                  <div class="tab-item tab-active">
-                    <a class="tab-label active-btn">Web Design</a>
-                    <div class="tab-content">
-                      <div class="margin">
-                        <div class="s-12 m-6 l-3">
-                            <a class="our-work-container lightbox margin-bottom">
-                                <div class="our-work-text">
-                                    <h4>Hey You Hovered</h4>
-                                    <p>Laoreet dolore magna aliquam erat volutpat.</p>
-                                </div>
-                                <img src="{% static 'crypto/img/por1.jpg' %}" alt="">
-                            </a></div>
-                        <div class="s-12 m-6 l-3">
-                            <a class="our-work-container lightbox margin-bottom">
-                                <div class="our-work-text">
-                                    <h4>Lorem Ipsum Dolor</h4>
-                                    <p>Laoreet dolore magna aliquam erat volutpat.</p>
-                                </div>
-                                <img src="{% static 'crypto/img/por4.jpg' %}" alt="">
+
+            <div class="plan col-12 mx-2 my-2 favorite justify-content-center col-lg-3">
+                <div class="plan-header text-center pt-5">
+                    <img src="{% static 'crypto/assets/images/ethereum.png' %}"><hr>
+                    <h3 class="plan-title text-secondary mbr-fonts-style display-5">ETHEREUM</h3>
+                    <!--<div class="plan-price">-->
+                        <!--<span class="price-value mbr-fonts-style display-5">-->
+                            <!--$-->
+                        <!--</span>-->
+                        <!--<span class="price-figure mbr-fonts-style display-1">-->
+                            <!--150</span>-->
+                        <!--<small class="price-term mbr-fonts-style display-7">-->
+                            <!--today-->
+                        <!--</small>-->
+                    <!--</div>-->
+                </div>
+                <div class="plan-body">
+                    <p class="text-center">BUY: &#8358;
+                        <span id="eth_buy_price">{{ ethereum_price.new_price }}0</span> | SELL: &#8358;
+                        <span id="eth_sell_price">{{ eth_sell_price.new_price }}0</span>
+                    </p>
+                    <!--<div class="mbr-section-btn text-center py-4 pb-5">-->
+                        <!--<a href="https://coinrios.com" class="btn btn-primary display-4">BUY NOW</a>-->
+                    <!--</div>-->
+                </div>
+
+                <div style="border: solid 10px #e4e4e4;"></div>
+
+                <div class="plan-header text-center pt-5">
+                    <img src="{% static 'crypto/assets/images/perfect-money.png' %}"><hr>
+                    <h3 class="plan-title text-secondary mbr-fonts-style display-5">PERFECT MONEY</h3>
+                </div>
+                <div class="plan-body">
+                    <p class="text-center">BUY: &#8358;
+                        <span id="pm_buy_price">{{ perfect_money_price.new_price }}0</span> | SELL: &#8358;
+                        <span id="pm_sell_price">{{ pm_sell_price.new_price }}0</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="counters2 counters cid-rvfrnjvsee" id="counters2-e">
+
+    <div class="container pt-4 mt-2">
+        <div class="media-container-row">
+            <div class="media-block" style="width: 49%;">
+                <h2 class="mbr-section-title pb-3 align-left mbr-fonts-style display-2">
+                    Why Choose Coinrios</h2>
+                <h3 class="mbr-section-subtitle pb-5 align-left mbr-fonts-style display-5">Create buy and sell orders for Bitcoin, Ripple, Ethereum and Perfect Money. Get funded in minutes.</h3>
+                <div class="mbr-figure">
+                    <img src="{% static 'crypto/assets/images/background6.jpg' %}">
+                </div>
+            </div>
+            <div class="cards-block">
+                <div class="cards-container">
+                    <div class="card px-3 align-left col-12 col-md-6">
+                        <div class="panel-item p-3">
+                            <div class="card-img pb-3">
+                                <span class="mbr-iconfont pr-2 mobi-mbri-growing-chart mobi-mbri"></span>
+                                <h3 class="count py-3 mbr-fonts-style display-2">
+                                    100
+                                </h3>
+                            </div>
+                            <div class="card-text">
+                                <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">AMAZING RATES</h4>
+                                <p class="mbr-content-text mbr-fonts-style display-7">
+                                    We do our best to offer the most competitive rates. All fees are inclusive in the rate so you do not pay any extra charges. Thank us later!!! &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card px-3 align-left col-12 col-md-6">
+                        <div class="panel-item p-3">
+                            <div class="card-img pb-3">
+                                <span class="mbri-extension mbr-iconfont pr-2"></span>
+                                <h3 class="count py-3 mbr-fonts-style display-2">
+                                    200
+                                </h3>
+                            </div>
+                            <div class="card-text">
+                                <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">SIMPLY THE BEST</h4>
+                                <p class="mbr-content-text mbr-fonts-style display-7">Action speaks louder than voice as it is commonly said. Taste and see that Coinrios is just the best when it comes to Cryptocurrency</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card px-3 align-left col-12 col-md-6">
+                        <div class="panel-item p-3">
+                            <div class="card-img pb-3">
+                                <span class="mbr-iconfont pr-2 mbri-touch"></span>
+                                <h3 class="count py-3 mbr-fonts-style display-2">
+                                    300
+                                </h3>
+                            </div>
+                            <div class="card-text">
+                                <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">
+                                    EASY TO ORDER                     </h4>
+                                <p class="mbr-content-text mbr-fonts-style display-7">
+                                        One of Coinrios Known Feature is easy to order Bitcoin, Ripple, Ethereum, Perfect Money, etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card px-3 align-left col-12 col-md-6">
+                        <div class="panel-item p-3">
+                            <div class="card-img pb-3">
+                                <span class="mbr-iconfont pr-2 mbri-rocket"></span>
+                                <h3 class="count py-3 mbr-fonts-style display-2">
+                                    400
+                                </h3>
+                            </div>
+                            <div class="card-texts">
+                                <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">ROCKET/INSTANT FUNDING</h4>
+                                <p class="mbr-content-text mbr-fonts-style display-7">
+                                        Timely delivery is very important to us. One thing you'd hear our customers say is that we process orders with speed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</section>
+
+<h2 class="align-center">Crypto Currency Market</h2><br>
+<section class="container">
+    <div class="table-responsive">
+        <table class="table table-hover table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Daily High</th>
+                    <th scope="col">Daily Low</th>
+                    <th scope="col">Market Cap</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for key, value in crypto_prices.DISPLAY.items %}
+                <tr>
+                    <th scope="row">{{ key }}</th>
+                    <td><span id="{{ key }}Price" >{{ value.USD.PRICE }}</span></td>
+                    <td>{{ value.USD.HIGHDAY }}</td>
+                    <td>{{ value.USD.LOWDAY }}</td>
+                    <td>{{ value.USD.MKTCAP }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+<br><br><br><br>
+<section class="features8 cid-rvCJeReqHs mbr-parallax-background" id="features8-u">
+
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(35, 35, 35);">
+    </div>
+
+    <div class="container">
+        <div class="media-container-row">
+
+            <div class="card  col-12 col-md-6 col-lg-4">
+                <div class="card-img">
+                    <span class="mbri-desktop mbr-iconfont"></span>
+                </div>
+                <div class="card-box align-center">
+                    <h4 class="card-title mbr-fonts-style display-7">
+                        Unlimited Orders
+                    </h4>
+                    <p class="mbr-text mbr-fonts-style display-7">
+                       Coinrios gives you the freedom to make unlimited orders.
+                    </p>
+                    <div class="mbr-section-btn text-center">
+                        <!--<a href="#" class="btn btn-secondary display-4">More</a>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="card  col-12 col-md-6 col-lg-4">
+                <div class="card-img">
+                    <span class="mbri-touch mbr-iconfont"></span>
+                </div>
+                <div class="card-box align-center">
+                    <h4 class="card-title mbr-fonts-style display-7">
+                        Mobile Friendly
+                    </h4>
+                    <p class="mbr-text mbr-fonts-style display-7">
+                       Orders you make with coinrios are quick and easy. You don't have to do anything that looks difficult.
+                    </p>
+                    <div class="mbr-section-btn text-center">
+                        <!--<a href="#" class="btn btn-secondary display-4">More</a>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="card  col-12 col-md-6 col-lg-4">
+                <div class="card-img">
+                    <span class="mbri-responsive mbr-iconfont"></span>
+                </div>
+                <div class="card-box align-center">
+                    <h4 class="card-title mbr-fonts-style display-7">Payment Master</h4>
+                    <p class="mbr-text mbr-fonts-style display-7">
+                       Coinrios accepts all kinds payment. We accept bank transfer, payment with International or Local cards like Visa, Mastercard, Verve etc.
+                    </p>
+                    <div class="mbr-section-btn text-center">
+                        <!--<a href="#" class="btn btn-secondary display-4">More</a>-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="step2 cid-rvfDOgdA46" id="step2-h">
+
+    <div class="container">
+        <h2 class="mbr-section-title pb-3 mbr-fonts-style align-center display-2">
+            Steps
+        </h2>
+        <h3 class="mbr-section-subtitle pb-5 mbr-fonts-style align-center display-5">HOW TO BUY OR SELL CRYPTO-CURRENCIES ON COINRIOS</h3>
+        <div class="step-container row justify-content-center">
+            <div class="card col-12 col-md-4 separline">
+                <div class="step-element">
+                    <div class="step-wrapper pb-3">
+                        <h3 class="step d-flex align-items-center justify-content-center m-auto">
+                            1
+                        </h3>
+                    </div>
+                    <div class="step-text-content align-center">
+                        <h4 class="mbr-step-title pb-3 mbr-fonts-style display-5">&nbsp;Sign Up</h4>
+                        <p class="mbr-step-text mbr-fonts-style display-7">
+                            It only takes a few minutes to create an account with us and start trading. We can't wait to have you as our customer!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-12 separline col-md-4">
+                <div class="step-element">
+                    <div class="step-wrapper pb-3">
+                        <h3 class="step d-flex align-items-center justify-content-center m-auto">
+                            2
+                        </h3>
+                    </div>
+                    <div class="step-text-content align-center">
+                        <h4 class="mbr-step-title pb-3 mbr-fonts-style display-5">Create Order</h4>
+                        <p class="mbr-step-text mbr-fonts-style display-7">
+                            Login to your Coinrios&nbsp;account. Complete the buy or sell order form for any of the cryptocurrencies and make payment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-md-4 col-12 separline last-child">
+                <div class="step-element">
+                    <div class="step-wrapper pb-3">
+                        <h3 class="step d-flex align-items-center justify-content-center m-auto">
+                            3
+                        </h3>
+                    </div>
+                    <div class="step-text-content align-center">
+                        <h4 class="mbr-step-title pb-3 mbr-fonts-style display-5">Get Funded</h4>
+                        <p class="mbr-step-text mbr-fonts-style display-7">
+                            Our adept staff work tirelessly to provide you with top-notch customer service and ensure orders are completed within minutes.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="carousel slide testimonials-slider cid-rvfEAUk6TR" data-interval="false" id="testimonials-slider1-p">
+
+    <div class="container text-center">
+        <h2 class="pb-5 mbr-fonts-style display-2">
+            WHAT OUR FANTASTIC CLIENTS SAY
+        </h2>
+
+        <div class="carousel slide" role="listbox" data-pause="true" data-keyboard="false" data-ride="carousel" data-interval="5000">
+            <div class="carousel-inner">
+
+            <div class="carousel-item">
+                    <div class="user col-md-8">
+                        <div class="user_image">
+                            <img src="{% static 'crypto/assets/images/face3.jpg' %}">
+                        </div>
+                        <div class="user_text pb-3">
+                            <p class="mbr-fonts-style display-7">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nostrum, quos voluptas fugiat blanditiis, temporibus expedita cumque doloribus ea, officiis consequuntur repellat minus ad veritatis? Facere similique accusamus, accusantium sunt!
+                            </p>
+                        </div>
+                        <div class="user_name mbr-bold pb-2 mbr-fonts-style display-7">
+                            Alex
+                        </div>
+                        <div class="user_desk mbr-light mbr-fonts-style display-7">
+                            DESIGNER
+                        </div>
+                    </div>
+                </div><div class="carousel-item">
+                    <div class="user col-md-8">
+                        <div class="user_image">
+                            <img src="{% static 'crypto/assets/images/face2.jpg' %}">
+                        </div>
+                        <div class="user_text pb-3">
+                            <p class="mbr-fonts-style display-7">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nostrum, quos voluptas fugiat blanditiis, temporibus expedita cumque doloribus ea, officiis consequuntur repellat minus ad veritatis? Facere similique accusamus, accusantium sunt!
+                            </p>
+                        </div>
+                        <div class="user_name mbr-bold pb-2 mbr-fonts-style display-7">
+                            Linda
+                        </div>
+                        <div class="user_desk mbr-light mbr-fonts-style display-7">
+                            DEVELOPER
+                        </div>
+                    </div>
+                </div></div>
+
+            <div class="carousel-controls">
+                <a class="carousel-control-prev" role="button" data-slide="prev">
+                  <span aria-hidden="true" class="mbri-arrow-prev mbr-iconfont"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="carousel-control-next" role="button" data-slide="next">
+                  <span aria-hidden="true" class="mbri-arrow-next mbr-iconfont"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cid-qTkAaeaxX5" id="footer1-2">
+
+    <div class="container">
+        <div class="media-container-row content text-white">
+            <div class="col-12 col-md-3">
+                <div class="media-wrap">
+                    <a href="https://coinrios.com/">
+                        <img src="{% static 'crypto/assets/images/mbr-122x90.jpg' %}" alt="Coinrios" title="Coinrios">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Address
+                </h5>
+                <p class="mbr-text">
+                    1234 Street Name
+                    <br>City, AA 99999
+                </p>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Contacts
+                </h5>
+                <p class="mbr-text">
+                    Email: support@coinrios.com<br>Phone: +(234) 708 888 8068 <br>Phone:&nbsp;+(234) 802 911 1947</p>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Links
+                </h5>
+                <p class="mbr-text"></p><p><a href="https://frontlinetechpoint.com" target="_blank">Learn ICT</a><br><a href="https://frontlinetechpoint.com" target="_blank">Learn&nbsp;Blockchain</a><br><a href="https://newtrends247.com/" target="_blank">Get the latest News on Cryptocurrencies<br></a><br></p><p></p>
+            </div>
+        </div>
+        <div class="footer-lower">
+            <div class="media-container-row">
+                <div class="col-sm-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="media-container-row mbr-white">
+                <div class="col-sm-6 copyright">
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        © Copyright 2019 Coinrios-All Rights Reserved
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-list align-right">
+                        <div class="soc-item">
+                            <a href="https://twitter.com/coinrios" target="_blank">
+                                <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
                             </a>
                         </div>
-                        <div class="s-12 m-6 l-3">
-                            <a class="our-work-container lightbox margin-bottom">
-                                <div class="our-work-text">
-                                    <h4>Lorem Ipsum Dolor</h4>
-                                    <p>Laoreet dolore magna aliquam erat volutpat.</p>
-                                </div>
-                                <img src="{% static 'crypto/img/por6.jpg' %}" alt="">
+                        <div class="soc-item">
+                            <a href="https://www.facebook.com/pages/coinrios/1616226671953247" target="_blank">
+                                <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
                             </a>
                         </div>
-                        <div class="s-12 m-6 l-3">
-                            <a class="our-work-container lightbox margin-bottom">
-                                <div class="our-work-text">
-                                    <h4>Lorem Ipsum Dolor</h4>
-                                    <p>Laoreet dolore magna aliquam erat volutpat.</p>
-                                </div>
-                                <img src="{% static 'crypto/img/por3.jpg' %}" alt="">
+                        <div class="soc-item">
+                            <a href="https://www.youtube.com/c/coinrios" target="_blank">
+                                <span class="socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
                             </a>
                         </div>
-                      </div>
-                    </div>  
-                  </div>
-                  <div class="tab-item">
-                    <a class="tab-label">Development</a>        
-                    <div class="tab-content">
-                      <div class="margin">
-                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por7.jpg' %}" alt=""></a></div>
-                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por5.jpg' %}" alt=""></a></div>
-                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por1.jpg' %}" alt=""></a></div>
-                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por2.jpg' %}" alt=""></a></div>
-                      </div>
-                    </div>  
-                  </div>
-                  <div class="tab-item">
-                    <a class="tab-label">Social Campaigns</a>
-                    <div class="tab-content">
-                      <div class="margin">
-                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por4.jpg' %}" alt=""></a></div>
-                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por6.jpg' %}" alt=""></a></div>
-                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por3.jpg' %}" alt=""></a></div>
-                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por5.jpg' %}" alt=""></a></div>
-                      </div>
-                    </div>  
-                  </div>
-                  <div class="tab-item">
-                    <a class="tab-label">Photography</a>
-                    <div class="tab-conent">
-                      <div class="margin">
-                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por7.jpg' %}" alt=""></a></div>
-                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por2.jpg' %}" alt=""></a></div>
-                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por5.jpg' %}" alt=""></a></div>
-                        <div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por6.jpg' %}" alt=""></a></div>
-                      </div>
-                    </div>  
-                  </div>
-               </div>
+                        <div class="soc-item">
+                            <a href="https://instagram.com/coinrios" target="_blank">
+                                <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://plus.google.com/u/0/+coinrios" target="_blank">
+                                <span class="socicon-googleplus socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.behance.net/coinrios" target="_blank">
+                                <span class="socicon-behance socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>         
-         <!-- SERVICES -->
-         <div id="services">
-            <div class="line">
-               <h2 class="section-title">What we do</h2>
-               <div class="margin">
-                  <div class="s-12 m-6 l-4 margin-bottom">
-                     <i class="icon-vector"></i>
-                     <div class="service-text">
-                        <h3>We create</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                     </div>
-                  </div>
-                  <div class="s-12 m-6 l-4 margin-bottom">
-                     <i class="icon-eye"></i>
-                     <div class="service-text">
-                        <h3>We look to the future</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                     </div>
-                  </div>
-                  <div class="s-12 m-12 l-4 margin-bottom">
-                     <i class="icon-random"></i>
-                     <div class="service-text">
-                        <h3>We find a solution</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- LATEST NEWS -->
-          <!--
-         <div id="latest-news">
-            <div class="line">
-              <h2 class="section-title">Latest News</h2> 
-              <div class="margin">
-                <div class="s-12 m-6 l-6">
-                  <div class="s-12 l-2">
-                    <div class="news-date">
-                      <p class="day">28</p><p class="month">AUGUST</p><p class="year">2015</p>
-                    </div>
-                  </div>
-                  <div class="s-12 l-10">
-                    <div class="news-text">
-                      <h4>First latest News</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
-                    </div>
-                  </div>   
-                </div> 
-                <div class="s-12 m-6 l-6">
-                  <div class="s-12 l-2">
-                    <div class="news-date">
-                      <p class="day">12</p><p class="month">JULY</p><p class="year">2015</p>
-                    </div>
-                  </div>
-                  <div class="s-12 l-10">
-                    <div class="news-text">
-                      <h4>Second latest News</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
-                    </div>
-                  </div>   
-                </div>  
-              </div>
-            </div>
-         </div>
-          -->
-         <!-- CONTACT -->
-         <div id="contact">
-            <div class="line">
-               <h2 class="section-title">Contact Us</h2>
-               <div class="margin">
-                  <div class="s-12 m-12 l-3 hide-m hide-s margin-bottom right-align">
-                    <img src="{% static 'crypto/img/contact.jpg' %}" alt="">
-                  </div>
-                  <div class="s-12 m-12 l-4 margin-bottom right-align">
-                     <h3>Coin Rios</h3>
-                     <address>
-                        <p><strong>Adress:</strong> Alba Plaza, Opp ITC, Jabi Abuja</p>
-                        <p><strong>Country:</strong> Nigeria - Africa</p>
-                        <p><strong>E-mail:</strong> info@domain.com</p>
-                     </address>
-                     <br />
-                     <h3>Social</h3>
-                     <p>
-                         <i class="icon-facebook icon"></i><!--https://www.facebook.com/pages/Vision-Design-graphic-ZOO/154664684553091-->
-                         <a href="#">Hugo Design - Coin Rios</a>
-                     </p>
-                     <p class="margin-bottom">
-                         <i class="icon-twitter icon"></i>
-                         <a href="#">Hugo Design - Coin Rios</a>
-                     </p>
-                  </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
 
-                   <div class="s-12 m-12 l-5">
-                    <h3>Contact Form</h3>
-                    <form class="customform" method="post" action="">
-                        {% csrf_token %}
-                        <div class="s-12">
-                            <input name="email" maxlength="254" required id="id_email" placeholder="Your e-mail" title="Your e-mail" type="email" />
-                        </div>
-                        <div class="s-12">
-                            <input type="text" name="full_name" maxlength="200" required id="id_full_name" placeholder="Your name" title="Your name" />
-                        </div>
-                        <div class="s-12">
-                            <textarea placeholder="Your message" name="message" rows="5" required id="id_message"></textarea>
-                        </div>
-                        <div class="s-12 m-12 l-4"><button class="color-btn" type="submit">Submit Button</button></div>
-                    </form>
-                  </div>                
-               </div>
-            </div>
-         </div>
-         <!-- MAP -->
-         <!--<div id="map-block">  	  -->
-            <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1247814.3661917313!2d16.569872019090596!3d48.23131953825178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8cbf758ecb9f%3A0xddeb1d26bce5eccf!2sGallayova+2150%2F19%2C+841+02+D%C3%BAbravka!5e0!3m2!1ssk!2ssk!4v1440344568394" width="100%" height="450" frameborder="0" style="border:0"></iframe>-->
-         <!--</div>-->
-      </section>
-      <!-- FOOTER -->
 
-      <footer>
-         <div class="line">
-            <div class="s-12 l-6">
-               <p>Copyright 2019, Coin Rios</p>
-            </div>
-            <!--<div class="s-12 l-6">-->
-               <!--<a class="right" href="">Design and coding by Hugo</a>-->
-            <!--</div>-->
-         </div>
-      </footer>
-      <script type="text/javascript" src="{% static 'crypto/js/responsee.js' %}"></script>
-      <script type="text/javascript" src="{% static 'crypto/owl-carousel/owl.carousel.js' %}"></script>
-      <script type="text/javascript">
-         jQuery(document).ready(function($) {
-            var theme_slider = $("#owl-demo");
-            $("#owl-demo").owlCarousel({
-                navigation: false,
-                slideSpeed: 300,
-                paginationSpeed: 400,
-                autoPlay: 6000,
-                addClassActive: true,
-             // transitionStyle: "fade",
-                singleItem: true
-            });
-            $("#owl-demo2").owlCarousel({
-                slideSpeed: 300,
-                autoPlay: true,
-                navigation: true,
-                navigationText: ["&#xf007","&#xf006"],
-                pagination: false,
-                singleItem: true
-            });
-        
-            // Custom Navigation Events
-            $(".next-arrow").click(function() {
-                theme_slider.trigger('owl.next');
-            })
-            $(".prev-arrow").click(function() {
-                theme_slider.trigger('owl.prev');
-            })     
-        }); 
-      </script>
-   </body>
+    <!--<h1><span class="crypto_prices">{{ value.USD.PRICE }}</span></h1>-->
+
+
+  <script src="{% static 'crypto/assets/web/assets/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'crypto/assets/popper/popper.min.js' %}"></script>
+  <script src="{% static 'crypto/assets/tether/tether.min.js' %}"></script>
+  <script src="{% static 'crypto/assets/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'crypto/assets/vimeoplayer/jquery.mb.vimeo_player.js' %}"></script>
+  <script src="{% static 'crypto/assets/parallax/jarallax.min.js' %}"></script>
+  <script src="{% static 'crypto/assets/viewportchecker/jquery.viewportchecker.js' %}"></script>
+  <script src="{% static 'crypto/assets/dropdown/js/nav-dropdown.js' %}"></script>
+  <script src="{% static 'crypto/assets/dropdown/js/navbar-dropdown.js' %}"></script>
+  <script src="{% static 'crypto/assets/touchswipe/jquery.touch-swipe.min.js' %}"></script>
+  <script src="{% static 'crypto/assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js' %}"></script>
+  <script src="{% static 'crypto/assets/coinrios-testimonials-slider/coinrios-testimonials-slider.js' %}"></script>
+  <script src="{% static 'crypto/assets/smoothscroll/smooth-scroll.js' %}"></script>
+  <script src="{% static 'crypto/assets/theme/js/script.js' %}"></script>
+    <script>
+
+		$(document).ready(function() {
+
+			var supportedCurr = ['BTC', 'LTC', 'ETH'];
+
+			// this is removing the dollar sign from the btc
+			var btc_price = $("#BTCPrice").text().replace("$ ", "")
+
+			// this is removing the comma sign from the btc
+			var btc_price_without_comma = btc_price.replace(/,/g, '');
+
+			// this is removing the dollar sign from the eth
+			var eth_price = $("#ETHPrice").text().replace("$ ", "")
+
+			// this is removing the comma sign from the eth
+			var eth_price_without_comma = eth_price.replace(/,/g, '');
+
+			// this is removing the dollar sign from the ltc
+			var ltc_price = $("#LTCPrice").text().replace("$ ", "")
+
+			// this is removing the comma sign from the ltc
+			var ltc_price_without_comma = ltc_price.replace(/,/g, '');
+
+			// this is removing the dollar sign from the pm
+			//var pm_price = $("#PMPrice").text().replace("$ ", "")
+
+			// this is removing the comma sign from the pm
+			//var pm_price_without_comma = pm_price.replace(/,/g, '');
+
+            //var crypto_prices = $('.crypto_prices').text(btc_price_without_comma);
+
+            // coinrios rates
+            var btc_buy_price = $("#btc_buy_price").text()
+            var btc_sell_price = $("#btc_sell_price").text()
+
+            var eth_buy_price = $("#eth_buy_price").text()
+            var eth_sell_price = $("#eth_sell_price").text()
+
+            var ltc_buy_price = $("#ltc_buy_price").text()
+            var ltc_sell_price = $("#ltc_sell_price").text()
+
+            var pm_buy_price = $("#pm_buy_price").text()
+            var pm_sell_price = $("#pm_sell_price").text()
+
+			var a_rates = {BTC: btc_price_without_comma, ETH: eth_price_without_comma, LTC: ltc_price_without_comma};
+
+			var currRates = [];
+
+            currRates['BTC'] = {buy: parseFloat(btc_buy_price), sell: parseFloat(btc_sell_price)};
+
+            currRates['PM'] = {buy: parseFloat(pm_buy_price), sell: parseFloat(pm_sell_price)};
+
+            //currRates['CNY'] = {buy: 52.7, sell: "NA"};
+
+            currRates['LTC'] = {buy: parseFloat(ltc_buy_price), sell: parseFloat(ltc_sell_price)};
+
+            currRates['ETH'] = {buy: parseFloat(eth_buy_price), sell: parseFloat(eth_sell_price)};
+
+
+	        $(".tab-box").click(function () {
+	            $(".tab-box").addClass("blur-div");
+	            $(this).removeClass("blur-div");
+	        });
+
+	        $('select#buy-currency').on('change blur', function (e) {
+	        	var selectConvert = $('#buy-convert');
+			    var optionSelected = $("option:selected", this);
+			    var valueSelected = this.value;
+
+			    selectConvert.find('option').remove().end().append('<option value="USD">USD</option>').val('USD');
+			    change_price('buy', valueSelected, 'USD');
+
+			    if (valueSelected == 0 || jQuery.inArray(valueSelected, supportedCurr) == -1) {return;}
+
+			    selectConvert.append('<option name="buy_amount_currency" value="' + valueSelected + '">' + valueSelected + '</option>');
+			});
+
+			$('select#buy-convert').on('blur change', function (e) {
+				var valueSelected = this.value;
+				var buyCurrency = $('select#buy-currency').val();
+
+				if (buyCurrency == 0) {return;}
+
+				change_price('buy', buyCurrency, valueSelected);
+			});
+
+			$('input#buy-input').on('blur change', function (e) {
+				var buyCurrency = $('select#buy-currency').val();
+				var selectConvert = $('#buy-convert').val();
+				if (buyCurrency == 0) {return;}
+				change_price('buy', buyCurrency, selectConvert);
+			});
+
+			$('select#sell-currency').on('change blur', function (e) {
+	        	var selectConvert = $('#sell-convert');
+			    var optionSelected = $("option:selected", this);
+			    var valueSelected = this.value;
+
+			    selectConvert.find('option').remove().end().append('<option value="USD">USD</option>').val('USD');
+			    change_price('sell', valueSelected, 'USD');
+
+			    if (valueSelected == 0 || jQuery.inArray(valueSelected, supportedCurr) == -1) {return;}
+
+			    selectConvert.append('<option name="sell_amount_currency" value="' + valueSelected + '">' + valueSelected + '</option>');
+			});
+
+			$('select#sell-convert').on('blur change', function (e) {
+				var valueSelected = this.value;
+				var buyCurrency = $('select#sell-currency').val();
+
+				if (buyCurrency == 0) {return;}
+
+				change_price('sell', buyCurrency, valueSelected);
+			});
+
+			$('input#sell-input').on('blur change', function (e) {
+				var buyCurrency = $('select#sell-currency').val();
+				var selectConvert = $('#sell-convert').val();
+				if (buyCurrency == 0) {return;}
+				change_price('sell', buyCurrency, selectConvert);
+			});
+
+			function change_price(option, curr, val){
+				var price = $('#' + option + '-price');
+				var input = $('#' + option + '-input').val();
+				input = parseFloat(input);
+				if (val !== 'USD') {input = input.toFixed(8);}
+				else{input = input.toFixed(2);}
+				if (option === 'buy') {var rate = currRates[curr].buy;}
+				else if(option === 'sell'){var rate = currRates[curr].sell;}
+				price.text(val + ' ' + input + ' @ ' + (rate.toFixed(2)) + ' Naira');
+				output_price(option, input, rate, val);
+				output_priceapi(option, curr);
+			}
+
+			function output_price(op, inp, ra, val){
+				var output = $('#' + op + '-output');
+				if (val == 'USD') {
+					naira = parseFloat(inp) * parseFloat(ra);
+				} else if(jQuery.inArray(val, supportedCurr) !== -1){
+					var api_rate = 0;
+					if (val == 'BTC') {
+						api_rate = a_rates.BTC;
+					} else if(val == 'LTC'){
+						api_rate = a_rates.LTC;
+					} else if(val == 'ETH'){
+						api_rate = a_rates.ETH;
+					}
+					naira = parseFloat(inp) * parseFloat(ra) * parseFloat(api_rate);
+				} else {
+					naira = 0.00;
+				}
+
+				output.val(naira.toFixed(2));
+			}
+
+			function output_priceapi(op, val){
+				var showInfo = $('.' + op + '-rate');
+				var sc = $('.' + op + '-sc');
+				var apiPrice = $('#' + op + '-api-price');
+				if(jQuery.inArray(val, supportedCurr) !== -1){
+					var api_rate = 0;
+					if (val == 'BTC') {
+						api_rate = a_rates.BTC;
+					} else if(val == 'LTC'){
+						api_rate = a_rates.LTC;
+					} else if(val == 'ETH'){
+						api_rate = a_rates.ETH;
+					}
+
+					apiPrice.text("1 " + val + " : $" + api_rate);
+					showInfo.show(1000);
+					sc.css('margin-bottom', '0rem');
+				}else{
+					showInfo.hide(1000);
+					apiPrice.text('');
+					sc.css('margin-bottom', '1rem');
+				}
+			}
+
+	    });
+
+    </script>
+
+ <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+    <input name="animation" type="hidden">
+  </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+       <!--{% load static %}-->
+       <!--{% load paystack %}-->
+      <!--<meta charset="UTF-8">-->
+      <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+      <!--<title>Coin Rios</title>-->
+      <!--<link rel="stylesheet" href="{% static 'crypto/css/components.css' %}">-->
+      <!--<link rel="stylesheet" href="{% static 'crypto/css/bootstrap.css' %}">-->
+      <!--<link rel="stylesheet" href="{% static 'crypto/css/responsee.css' %}">-->
+      <!--<link rel="stylesheet" href="{% static 'crypto/css/icons.css' %}">-->
+      <!--<link rel="stylesheet" href="{% static 'crypto/owl-carousel/owl.carousel.css' %}">-->
+      <!--<link rel="stylesheet" href="{% static 'crypto/owl-carousel/owl.teme.css' %}">-->
+      <!--&lt;!&ndash; CUSTOM STYLE &ndash;&gt;-->
+      <!--<link rel="stylesheet" href="{% static 'crypto/' %}css/template-style.css">-->
+      <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
+      <!--<script type="text/javascript" src="{% static 'crypto/js/jquery-1.8.3.min.js' %}"></script>-->
+      <!--<script type="text/javascript" src="{% static 'crypto/js/jquery-ui.min.js' %}"></script>-->
+      <!--<script type="text/javascript" src="{% static 'crypto/js/template-scripts.js' %}"></script>-->
+   <!--</head>-->
+   <!--<body class="size-1140">-->
+  	  <!--&lt;!&ndash; PREMIUM FEATURES BUTTON &ndash;&gt;-->
+  	  <!--&lt;!&ndash;<a target="_blank" class="hide-s" href="../template/onepage-premium-template/" style="position:fixed;top:130px;right:-14px;z-index:10;">&ndash;&gt;-->
+          <!--&lt;!&ndash;<img src="{% static 'crypto/img/premium-features.png' %}" alt="">&ndash;&gt;-->
+      <!--&lt;!&ndash;</a>&ndash;&gt;-->
+      <!--&lt;!&ndash; TOP NAV WITH LOGO &ndash;&gt;-->
+      <!--<header>-->
+         <!--<div id="topbar">-->
+            <!--<div class="line">-->
+               <!--<div class="s-12 m-6 l-6">-->
+                  <!--<p>CONTACT US: <strong>08000000</strong> | <strong>contact@domain.com</strong></p>-->
+               <!--</div>-->
+               <!--<div class="s-12 m-6 l-6">-->
+                  <!--<div class="social right">-->
+                      <!--&lt;!&ndash;<a><i class="icon-facebook_circle"></i></a>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<a><i class="icon-twitter_circle"></i></a>&ndash;&gt;-->
+
+                      <!--<a href="{% url 'create_registered_user' %}"> Register</a>-->
+                      <!--|||-->
+                      <!--<a href="{% url 'login' %}">Login</a>|||-->
+                      <!--{% if user.is_authenticated %}-->
+                      <!--<a href="{% url 'registered_user:dashboard' %}">Dashboard</a>-->
+                      <!--{% endif %}-->
+                  <!--</div>-->
+               <!--</div>-->
+            <!--</div>  -->
+         <!--</div> -->
+         <!--<nav>-->
+            <!--<div class="line">-->
+               <!--<div class="s-12 l-2">-->
+                   <!--&lt;!&ndash;<img src="{% static 'crypto/img/logo.png' %}">&ndash;&gt;-->
+                   <!--<p class="logo"><strong>Coin</strong>Rios</p>-->
+               <!--</div>-->
+               <!--<div class="top-nav s-12 l-10">-->
+                  <!--<p class="nav-text">Menu</p>-->
+                  <!--<ul class="right">-->
+                     <!--<li class="active-item"><a href="#carousel">Home</a></li>-->
+                     <!--<li><a href="#features">Coins</a></li>-->
+                     <!--<li><a href="#about-us">About Us</a></li>-->
+                     <!--<li><a href="#our-work">Our Work</a></li>-->
+                     <!--<li><a href="#services">Services</a></li>-->
+                     <!--<li><a href="#contact">Contact</a></li>-->
+
+                  <!--</ul>-->
+               <!--</div>-->
+            <!--</div>-->
+         <!--</nav>-->
+      <!--</header>  -->
+      <!--<section>-->
+         <!--&lt;!&ndash; CAROUSEL &ndash;&gt; -->
+         <!--<div id="carousel">-->
+            <!--<div id="owl-demo" class="owl-carousel owl-theme">-->
+               <!--<div class="item">-->
+                  <!--<img src="{% static 'crypto/img/third.jpg' %}" alt="">-->
+                  <!--<div class="line">-->
+                     <!--<div class="text hide-s">-->
+                        <!--<h2>The Nigerian No. 1 Exchanger</h2>-->
+                        <!--<p>Buy and sell coins in a minute</p>-->
+                     <!--</div>-->
+                  <!--</div>-->
+               <!--</div>-->
+            <!--</div>-->
+         <!--</div>-->
+         <!--&lt;!&ndash; FIRST BLOCK &ndash;&gt;-->
+         <!--<div id="first-block">-->
+            <!--<div class="line">-->
+               <!--<h1>Buy and Sell Coins Now</h1>-->
+               <!--<div class="container center">-->
+                   <!--<div class="row justify-content-center">-->
+                       <!--<div class="col col-md-4">-->
+                            <!--<a class="white-btn" href="{% url 'registered_user:dashboard' %}">Buy</a>-->
+                       <!--</div>-->
+                       <!--<div class="col col-md-4">-->
+                            <!--<a class="white-btn" href="{% url 'registered_user:sell' %}">Sell</a>-->
+                       <!--</div>-->
+                   <!--</div>-->
+               <!--</div>-->
+            <!--</div>-->
+         <!--</div>-->
+         <!--&lt;!&ndash; FEATURES &ndash;&gt;-->
+         <!--<div id="features">-->
+            <!--<div class="container">-->
+               <!--<div class="row">-->
+                  <!--<div class="col col-md-6">-->
+                     <!--<div class="card text-center">-->
+                        <!--<div class="card-header bg-dark-blue text-white">-->
+                            <!--BITCOIN-->
+                        <!--</div>-->
+                        <!--<div class="card-body">-->
+                            <!--<i class="icon-tablet icon3x"></i>-->
+                            <!--<div class="row">-->
+                                <!--<div class="col col-sm-12 col-md-6">-->
+                                    <!--<h5 class="card-title">BUY BITCOIN @ {{ btc_price }}</h5>-->
+                                    <!--<a href="{% url 'registered_user:dashboard' %}" class="btn btn-primary text-white">BUY BITCOIN</a>-->
+                                <!--</div>-->
+                                <!--<div class="col col-sm-12 col-md-6">-->
+                                    <!--&lt;!&ndash;frontlinetechpoint&ndash;&gt;-->
+                                    <!--{% paystack_button amount=100 email="charlesugo000@gmail.com" %}-->
+                                    <!--<h5 class="card-title">SELL BITCOIN @ {{ btc_sell_price }}</h5>-->
+                                    <!--<a href="{% url 'registered_user:sell' %}" class="btn btn-primary text-white">SELL BITCOIN</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                     <!--</div>-->
+                  <!--</div>-->
+
+                  <!--<div class="col col-md-6">-->
+                     <!--<div class="card text-center">-->
+                        <!--<div class="card-header bg-dark-blue text-white">-->
+                            <!--RIPPLE-->
+                        <!--</div>-->
+                        <!--<div class="card-body">-->
+                            <!--<i class="icon-isight icon3x"></i>-->
+                            <!--<div class="row">-->
+                                <!--<div class="col col-sm-12 col-md-6">-->
+                                    <!--<h5 class="card-title">BUY RIPPLE @ {{ ripple_price }}</h5>-->
+                                    <!--<a href="{% url 'registered_user:dashboard' %}" class="btn btn-primary text-white">BUY RIPPLE</a>-->
+                                <!--</div>-->
+                                <!--<div class="col col-sm-12 col-md-6">-->
+                                    <!--<h5 class="card-title">SELL RIPPLE @ {{ xrp_sell_price }}</h5>-->
+                                    <!--<a href="{% url 'registered_user:sell' %}" class="btn btn-primary text-white">SELL RIPPLE</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                     <!--</div>-->
+                  <!--</div>-->
+
+                   <!--<br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+
+                  <!--<div class="col col-md-6">-->
+                     <!--<div class="card text-center">-->
+                        <!--<div class="card-header bg-dark-blue text-white">-->
+                            <!--ETHEREUM-->
+                        <!--</div>-->
+                        <!--<div class="card-body">-->
+                            <!--<i class="icon-star icon3x"></i>-->
+                            <!--<div class="row">-->
+                                <!--<div class="col col-sm-12 col-md-6">-->
+                                    <!--<h5 class="card-title">BUY ETHEREUM @ {{ ethereum_price }}</h5>-->
+                                    <!--<a href="{% url 'registered_user:dashboard' %}" class="btn btn-primary text-white">BUY ETHEREUM</a>-->
+                                <!--</div>-->
+                                <!--<div class="col col-sm-12 col-md-6">-->
+                                    <!--<h5 class="card-title">SELL ETHEREUM @ {{ eth_sell_price }}</h5>-->
+                                    <!--<a href="{% url 'registered_user:sell' %}" class="btn btn-primary text-white">SELL ETHEREUM</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                     <!--</div>-->
+                  <!--</div>-->
+
+                   <!--<div class="col col-md-6">-->
+                     <!--<div class="card text-center">-->
+                        <!--<div class="card-header bg-dark-blue text-white">-->
+                            <!--PERFECT ETHEREUM-->
+                        <!--</div>-->
+                        <!--<div class="card-body">-->
+                            <!--<i class="icon-heart icon3x"></i>-->
+                            <!--<div class="row">-->
+                                <!--<div class="col col-sm-12 col-md-6">-->
+                                    <!--<h5 class="card-title">BUY PERFECT MONEY @ {{ perfect_money_price }}</h5>-->
+                                    <!--<a href="{% url 'registered_user:dashboard' %}" class="btn btn-primary text-white">BUY PERFECT MONEY</a>-->
+                                <!--</div>-->
+                                <!--<div class="col col-sm-12 col-md-6">-->
+                                    <!--<h5 class="card-title">SELL PERFECT MONEY @ {{ pm_sell_price }}</h5>-->
+                                    <!--<a href="{% url 'registered_user:sell' %}" class="btn btn-primary text-white">SELL PERFECT MONEY</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                     <!--</div>-->
+                  <!--</div>-->
+
+               <!--</div>-->
+            <!--</div>-->
+         <!--</div>-->
+         <!--&lt;!&ndash; ABOUT US &ndash;&gt;-->
+         <!--<div id="about-us">-->
+            <!--<div class="s-12 m-12 l-6 media-container">-->
+               <!--<img src="{% static 'crypto/img/about.jpg' %}" alt="">-->
+            <!--</div>-->
+            <!--<article class="s-12 m-12 l-6">-->
+               <!--<h2>We are<br> Crypto Currency<br> Heroes</h2>-->
+               <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet -->
+                 <!--dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit -->
+                 <!--lobortis nisl ut aliquip ex ea commodo consequat.-->
+               <!--</p>-->
+               <!--<div class="about-us-icons">-->
+                  <!--<i class="icon-paperplane_ico"></i> <i class="icon-trophy"></i> <i class="icon-clock"></i>-->
+               <!--</div>-->
+            <!--</article>-->
+         <!--</div>-->
+         <!--&lt;!&ndash; OUR WORK &ndash;&gt;-->
+         <!--<div id="our-work">-->
+            <!--<div class="line">-->
+               <!--<h2 class="section-title">Our Work</h2>-->
+               <!--<div class="tabs">-->
+                  <!--<div class="tab-item tab-active">-->
+                    <!--<a class="tab-label active-btn">Web Design</a>-->
+                    <!--<div class="tab-content">-->
+                      <!--<div class="margin">-->
+                        <!--<div class="s-12 m-6 l-3">-->
+                            <!--<a class="our-work-container lightbox margin-bottom">-->
+                                <!--<div class="our-work-text">-->
+                                    <!--<h4>Hey You Hovered</h4>-->
+                                    <!--<p>Laoreet dolore magna aliquam erat volutpat.</p>-->
+                                <!--</div>-->
+                                <!--<img src="{% static 'crypto/img/por1.jpg' %}" alt="">-->
+                            <!--</a></div>-->
+                        <!--<div class="s-12 m-6 l-3">-->
+                            <!--<a class="our-work-container lightbox margin-bottom">-->
+                                <!--<div class="our-work-text">-->
+                                    <!--<h4>Lorem Ipsum Dolor</h4>-->
+                                    <!--<p>Laoreet dolore magna aliquam erat volutpat.</p>-->
+                                <!--</div>-->
+                                <!--<img src="{% static 'crypto/img/por4.jpg' %}" alt="">-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="s-12 m-6 l-3">-->
+                            <!--<a class="our-work-container lightbox margin-bottom">-->
+                                <!--<div class="our-work-text">-->
+                                    <!--<h4>Lorem Ipsum Dolor</h4>-->
+                                    <!--<p>Laoreet dolore magna aliquam erat volutpat.</p>-->
+                                <!--</div>-->
+                                <!--<img src="{% static 'crypto/img/por6.jpg' %}" alt="">-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="s-12 m-6 l-3">-->
+                            <!--<a class="our-work-container lightbox margin-bottom">-->
+                                <!--<div class="our-work-text">-->
+                                    <!--<h4>Lorem Ipsum Dolor</h4>-->
+                                    <!--<p>Laoreet dolore magna aliquam erat volutpat.</p>-->
+                                <!--</div>-->
+                                <!--<img src="{% static 'crypto/img/por3.jpg' %}" alt="">-->
+                            <!--</a>-->
+                        <!--</div>-->
+                      <!--</div>-->
+                    <!--</div>  -->
+                  <!--</div>-->
+                  <!--<div class="tab-item">-->
+                    <!--<a class="tab-label">Development</a>        -->
+                    <!--<div class="tab-content">-->
+                      <!--<div class="margin">-->
+                        <!--<div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por7.jpg' %}" alt=""></a></div>-->
+                        <!--<div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por5.jpg' %}" alt=""></a></div>-->
+                        <!--<div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por1.jpg' %}" alt=""></a></div>-->
+                        <!--<div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por2.jpg' %}" alt=""></a></div>-->
+                      <!--</div>-->
+                    <!--</div>  -->
+                  <!--</div>-->
+                  <!--<div class="tab-item">-->
+                    <!--<a class="tab-label">Social Campaigns</a>-->
+                    <!--<div class="tab-content">-->
+                      <!--<div class="margin">-->
+                        <!--<div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por4.jpg' %}" alt=""></a></div>-->
+                        <!--<div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por6.jpg' %}" alt=""></a></div>-->
+                        <!--<div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por3.jpg' %}" alt=""></a></div>-->
+                        <!--<div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por5.jpg' %}" alt=""></a></div>-->
+                      <!--</div>-->
+                    <!--</div>  -->
+                  <!--</div>-->
+                  <!--<div class="tab-item">-->
+                    <!--<a class="tab-label">Photography</a>-->
+                    <!--<div class="tab-conent">-->
+                      <!--<div class="margin">-->
+                        <!--<div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por7.jpg' %}" alt=""></a></div>-->
+                        <!--<div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por2.jpg' %}" alt=""></a></div>-->
+                        <!--<div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por5.jpg' %}" alt=""></a></div>-->
+                        <!--<div class="s-12 m-6 l-3"><a class="our-work-container lightbox margin-bottom"><div class="our-work-text"><h4>Lorem Ipsum Dolor</h4><p>Laoreet dolore magna aliquam erat volutpat.</p></div><img src="{% static 'crypto/img/por6.jpg' %}" alt=""></a></div>-->
+                      <!--</div>-->
+                    <!--</div>  -->
+                  <!--</div>-->
+               <!--</div>-->
+            <!--</div>-->
+         <!--</div>         -->
+         <!--&lt;!&ndash; SERVICES &ndash;&gt;-->
+         <!--<div id="services">-->
+            <!--<div class="line">-->
+               <!--<h2 class="section-title">What we do</h2>-->
+               <!--<div class="margin">-->
+                  <!--<div class="s-12 m-6 l-4 margin-bottom">-->
+                     <!--<i class="icon-vector"></i>-->
+                     <!--<div class="service-text">-->
+                        <!--<h3>We create</h3>-->
+                        <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>-->
+                     <!--</div>-->
+                  <!--</div>-->
+                  <!--<div class="s-12 m-6 l-4 margin-bottom">-->
+                     <!--<i class="icon-eye"></i>-->
+                     <!--<div class="service-text">-->
+                        <!--<h3>We look to the future</h3>-->
+                        <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>-->
+                     <!--</div>-->
+                  <!--</div>-->
+                  <!--<div class="s-12 m-12 l-4 margin-bottom">-->
+                     <!--<i class="icon-random"></i>-->
+                     <!--<div class="service-text">-->
+                        <!--<h3>We find a solution</h3>-->
+                        <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>-->
+                     <!--</div>-->
+                  <!--</div>-->
+               <!--</div>-->
+            <!--</div>-->
+         <!--</div>-->
+         <!--&lt;!&ndash; LATEST NEWS &ndash;&gt;-->
+          <!--&lt;!&ndash;-->
+         <!--<div id="latest-news">-->
+            <!--<div class="line">-->
+              <!--<h2 class="section-title">Latest News</h2> -->
+              <!--<div class="margin">-->
+                <!--<div class="s-12 m-6 l-6">-->
+                  <!--<div class="s-12 l-2">-->
+                    <!--<div class="news-date">-->
+                      <!--<p class="day">28</p><p class="month">AUGUST</p><p class="year">2015</p>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <!--<div class="s-12 l-10">-->
+                    <!--<div class="news-text">-->
+                      <!--<h4>First latest News</h4>-->
+                      <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>-->
+                    <!--</div>-->
+                  <!--</div>   -->
+                <!--</div> -->
+                <!--<div class="s-12 m-6 l-6">-->
+                  <!--<div class="s-12 l-2">-->
+                    <!--<div class="news-date">-->
+                      <!--<p class="day">12</p><p class="month">JULY</p><p class="year">2015</p>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <!--<div class="s-12 l-10">-->
+                    <!--<div class="news-text">-->
+                      <!--<h4>Second latest News</h4>-->
+                      <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>-->
+                    <!--</div>-->
+                  <!--</div>   -->
+                <!--</div>  -->
+              <!--</div>-->
+            <!--</div>-->
+         <!--</div>-->
+          <!--&ndash;&gt;-->
+         <!--&lt;!&ndash; CONTACT &ndash;&gt;-->
+         <!--<div id="contact">-->
+            <!--<div class="line">-->
+               <!--<h2 class="section-title">Contact Us</h2>-->
+               <!--<div class="margin">-->
+                  <!--<div class="s-12 m-12 l-3 hide-m hide-s margin-bottom right-align">-->
+                    <!--<img src="{% static 'crypto/img/contact.jpg' %}" alt="">-->
+                  <!--</div>-->
+                  <!--<div class="s-12 m-12 l-4 margin-bottom right-align">-->
+                     <!--<h3>Coin Rios</h3>-->
+                     <!--<address>-->
+                        <!--<p><strong>Adress:</strong> Alba Plaza, Opp ITC, Jabi Abuja</p>-->
+                        <!--<p><strong>Country:</strong> Nigeria - Africa</p>-->
+                        <!--<p><strong>E-mail:</strong> info@domain.com</p>-->
+                     <!--</address>-->
+                     <!--<br />-->
+                     <!--<h3>Social</h3>-->
+                     <!--<p>-->
+                         <!--<i class="icon-facebook icon"></i>&lt;!&ndash;https://www.facebook.com/pages/Vision-Design-graphic-ZOO/154664684553091&ndash;&gt;-->
+                         <!--<a href="#">Hugo Design - Coin Rios</a>-->
+                     <!--</p>-->
+                     <!--<p class="margin-bottom">-->
+                         <!--<i class="icon-twitter icon"></i>-->
+                         <!--<a href="#">Hugo Design - Coin Rios</a>-->
+                     <!--</p>-->
+                  <!--</div>-->
+
+                   <!--<div class="s-12 m-12 l-5">-->
+                    <!--<h3>Contact Form</h3>-->
+                    <!--<form class="customform" method="post" action="">-->
+                        <!--{% csrf_token %}-->
+                        <!--<div class="s-12">-->
+                            <!--<input name="email" maxlength="254" required id="id_email" placeholder="Your e-mail" title="Your e-mail" type="email" />-->
+                        <!--</div>-->
+                        <!--<div class="s-12">-->
+                            <!--<input type="text" name="full_name" maxlength="200" required id="id_full_name" placeholder="Your name" title="Your name" />-->
+                        <!--</div>-->
+                        <!--<div class="s-12">-->
+                            <!--<textarea placeholder="Your message" name="message" rows="5" required id="id_message"></textarea>-->
+                        <!--</div>-->
+                        <!--<div class="s-12 m-12 l-4"><button class="color-btn" type="submit">Submit Button</button></div>-->
+                    <!--</form>-->
+                  <!--</div>                -->
+               <!--</div>-->
+            <!--</div>-->
+         <!--</div>-->
+         <!--&lt;!&ndash; MAP &ndash;&gt;-->
+         <!--&lt;!&ndash;<div id="map-block">  	  &ndash;&gt;-->
+            <!--&lt;!&ndash;<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1247814.3661917313!2d16.569872019090596!3d48.23131953825178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8cbf758ecb9f%3A0xddeb1d26bce5eccf!2sGallayova+2150%2F19%2C+841+02+D%C3%BAbravka!5e0!3m2!1ssk!2ssk!4v1440344568394" width="100%" height="450" frameborder="0" style="border:0"></iframe>&ndash;&gt;-->
+         <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--</section>-->
+      <!--&lt;!&ndash; FOOTER &ndash;&gt;-->
+
+      <!--<footer>-->
+         <!--<div class="line">-->
+            <!--<div class="s-12 l-6">-->
+               <!--<p>Copyright 2019, Coin Rios</p>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;<div class="s-12 l-6">&ndash;&gt;-->
+               <!--&lt;!&ndash;<a class="right" href="">Design and coding by Hugo</a>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+         <!--</div>-->
+      <!--</footer>-->
+      <!--<script type="text/javascript" src="{% static 'crypto/js/responsee.js' %}"></script>-->
+      <!--<script type="text/javascript" src="{% static 'crypto/owl-carousel/owl.carousel.js' %}"></script>-->
+      <!--<script type="text/javascript">-->
+         <!--jQuery(document).ready(function($) {-->
+            <!--var theme_slider = $("#owl-demo");-->
+            <!--$("#owl-demo").owlCarousel({-->
+                <!--navigation: false,-->
+                <!--slideSpeed: 300,-->
+                <!--paginationSpeed: 400,-->
+                <!--autoPlay: 6000,-->
+                <!--addClassActive: true,-->
+             <!--// transitionStyle: "fade",-->
+                <!--singleItem: true-->
+            <!--});-->
+            <!--$("#owl-demo2").owlCarousel({-->
+                <!--slideSpeed: 300,-->
+                <!--autoPlay: true,-->
+                <!--navigation: true,-->
+                <!--navigationText: ["&#xf007","&#xf006"],-->
+                <!--pagination: false,-->
+                <!--singleItem: true-->
+            <!--});-->
+        <!---->
+            <!--// Custom Navigation Events-->
+            <!--$(".next-arrow").click(function() {-->
+                <!--theme_slider.trigger('owl.next');-->
+            <!--})-->
+            <!--$(".prev-arrow").click(function() {-->
+                <!--theme_slider.trigger('owl.prev');-->
+            <!--})     -->
+        <!--}); -->
+      <!--</script>-->
+   <!--</body>-->
+<!--</html>-->

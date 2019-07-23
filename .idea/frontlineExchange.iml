@@ -6,13 +6,11 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="simple-ajax-crud-master" />
     <orderEntry type="module" module-name="bookstore" />
-    <orderEntry type="module" module-name="chat" />
     <orderEntry type="module" module-name="horizon" />
-    <orderEntry type="module" module-name="foodtasker-master_2" />
     <orderEntry type="module" module-name="SevenSpicesWebsite" />
     <orderEntry type="module" module-name="FoodDelivery" />
     <orderEntry type="module" module-name="e_portal" />
-    <orderEntry type="module" module-name="FoodApp" />
     <orderEntry type="module" module-name="eCommerce-master" />
+    <orderEntry type="module" module-name="coinrios" />
   </component>
 </module>

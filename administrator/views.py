@@ -1,19 +1,28 @@
 from django.urls import reverse_lazy
+from django.shortcuts import render
 from django.views.generic import TemplateView, CreateView, UpdateView, ListView, DetailView, DeleteView
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import login_required
+
 from login.models import User
 from crypto.models import Contact
 from administrator.models import BitCoinBuyPrice, RippleBuyPrice, EthereumBuyPrice, PerfectMoneyBuyPrice
 from administrator.models import BitCoinSellPrice, RippleSellPrice, EthereumSellPrice, PerfectMoneySellPrice
-from registered_user.models import BitCoin, Ripple, Ethereum, PerfectMoney
+from registered_user.models import BitCoin, Ripple, Ethereum, PerfectMoney, BuyOrders, SellOrders
 from registered_user.models import SellBitCoin, SellRipple, SellEthereum, SellPerfectMoney
 from login.decorators import administrator_required
-from django.utils.decorators import method_decorator
-from django.contrib.auth.decorators import login_required
 
 
-@method_decorator([login_required(), administrator_required()], name='dispatch')
-class AdminDashboard(TemplateView):
-    template_name = 'administrator/adminDashboard.html'
+@login_required
+@administrator_required
+def admin_dashboard(request):
+    buy_orders = BuyOrders.objects.all()
+    sell_orders = SellOrders.objects.all()
+    contact_form = Contact.objects.all()
+
+    context = {'buy_orders': buy_orders, 'sell_orders': sell_orders, 'contact_form': contact_form}
+    template = 'administrator/adminDashboard.html'
+    return render(request, template, context)
 
 
 # for bitcoin rates
@@ -210,6 +219,17 @@ class ListOfContactForms(ListView):
 @method_decorator([login_required(), administrator_required()], name='dispatch')
 class DeleteContactForm(DeleteView):
     model = Contact
+    success_url = reverse_lazy('administrator:adminDashboard')
+
+
+@method_decorator([login_required(), administrator_required()], name='dispatch')
+class DeleteBuyOrders(DeleteView):
+    model = BuyOrders
+    success_url = reverse_lazy('administrator:adminDashboard')
+
+
+class DeleteSellOrders(DeleteView):
+    model = SellOrders
     success_url = reverse_lazy('administrator:adminDashboard')
 
 # for the deleting of wrongly created prices

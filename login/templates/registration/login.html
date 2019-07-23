@@ -1,33 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <title>Frontline Exchange Login Form</title>
-    <link rel="stylesheet" href="{% static 'crypto/css/bootstrap.css' %}" />
-    <link rel="stylesheet" href="{% static 'administrator/css/hugoFramework.css' %}" />
-</head>
-<body style="background-color:#ecedf0;">
-    <br><br><br><br><br><br><br><br>
+{% extends 'crypto/index.html' %}
+{% load static %}
+{% block title %} LOGIN FORM {% endblock %}
+{% block body %}
+<link rel="stylesheet" href="{% static 'administrator/css/hugoFramework.css' %}" />
+<style>
+    body{background: #f9f9f9;}
+</style>
+<br><br><br><br><br><br>
     <div class="container-fluid">
-        <div class="text-center">
-            <a href="{% url 'crypto:landingPage' %}" class="hugoBtn btn-primary">Go back to home page</a>
-            <br><br>
-        </div>
+
         <div class="row justify-content-center">
-            <div class="col-12 col-md-12">
-                <div class="card mb-3">
-                    <div class="card-header cardHeader">COIN RIOS LOGIN FORM</div>
+            <div class="col-12 col-md-4">
+                <div class="card bg-white" style="border: solid 1px #cecdcd;">
+                    <div class="card-header cardHeader">COINRIOS LOGIN </div>
                     <div class="card-body cardBody">
                         <form method="post">
                             {% csrf_token %}
                             {{ form.as_p }}
-                            <button type="submit" class="btn btn-primary pull-right">Login</button>
-                            <a href="{% url 'create_registered_user' %}" class="float-right btn btn-outline-info">Sign Up</a>
+                            <button type="submit" class="btn btn-primary btn-sm pull-right">Login</button>
+                            <a href="{% url 'create_registered_user' %}" class="float-right btn-sm btn btn-outline-info">Sign Up</a>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}

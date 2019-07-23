@@ -15,6 +15,12 @@
     </a>
 </li>
 <li>
+    <a href="{% url 'registered_user:orders' %}">
+        <i class="text-info fa fa-shopping-cart" aria-hidden="true"></i>
+        <span>Orders</span>
+    </a>
+</li>
+<li>
     <a href="{% url 'registered_user:user_profile' user.pk %}">
         <i class="text-warning fa fa-user" aria-hidden="true"></i>
         <span>MY PROFILE</span>
@@ -62,31 +68,31 @@
                 </section>
             </div>
 
-            <div class="col-md-12 col-lg-6 col-xl-6">
-                <section class="panel panel-featured-left panel-featured-quartenary">
-                    <div class="panel-body">
-                        <div class="widget-summary">
-                            <div class="widget-summary-col widget-summary-col-icon">
-                                <div class="summary-icon bg-quartenary">
-                                    XRP
-                                </div>
-                            </div>
-                            <div class="widget-summary-col">
-                                <div class="summary">
-                                    <h3 class="text-center">RIPPLE</h3>
-                                    <div class="info">
-                                        <strong class="lead">BUY {{ ripple_price }}| SELL {{ xrp_sell_price }}</strong><br>
-                                    </div>
-                                </div>
-                                <div class="summary-footer">
-                                    <a href="{% url 'registered_user:ripple' user.pk %}" class="hugoBtn btn-primary pull-left">Buy XRP Now</a>
-                                    <a href="{% url 'registered_user:sell_ripple' user.pk %}" class="hugoBtn btn-success pull-right">Sell XRP Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
+            <!--<div class="col-md-12 col-lg-6 col-xl-6">-->
+                <!--<section class="panel panel-featured-left panel-featured-quartenary">-->
+                    <!--<div class="panel-body">-->
+                        <!--<div class="widget-summary">-->
+                            <!--<div class="widget-summary-col widget-summary-col-icon">-->
+                                <!--<div class="summary-icon bg-quartenary">-->
+                                    <!--XRP-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="widget-summary-col">-->
+                                <!--<div class="summary">-->
+                                    <!--<h3 class="text-center">RIPPLE</h3>-->
+                                    <!--<div class="info">-->
+                                        <!--<strong class="lead">BUY {{ ripple_price }}| SELL {{ xrp_sell_price }}</strong><br>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="summary-footer">-->
+                                    <!--<a href="{% url 'registered_user:ripple' user.pk %}" class="hugoBtn btn-primary pull-left">Buy XRP Now</a>-->
+                                    <!--<a href="{% url 'registered_user:sell_ripple' user.pk %}" class="hugoBtn btn-success pull-right">Sell XRP Now</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</section>-->
+            <!--</div>-->
 
             <div class="col-md-12 col-lg-6 col-xl-6">
                 <section class="panel panel-featured-left panel-featured-quartenary">

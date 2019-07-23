@@ -1,0 +1,111 @@
+{% extends 'administrator/base.html' %}
+{% block navLinks %}
+{% load static %}
+{% block title %} <title>Welcome {{ user }} | Sell Crypto Currencies</title> {% endblock %}
+<li>
+    <a href="{% url 'registered_user:dashboard' %}">
+        <i class="text-warning fa fa-usd" aria-hidden="true"></i>
+        <span>BUY</span>
+    </a>
+</li>
+<li>
+    <a href="{% url 'registered_user:sell' %}">
+        <i class="text-info fa fa-usd" aria-hidden="true"></i>
+        <span>SELL</span>
+    </a>
+</li>
+<li class="nav-active">
+    <a href="{% url 'registered_user:orders' %}">
+        <i class="text-info fa fa-shopping-cart" aria-hidden="true"></i>
+        <span>Orders</span>
+    </a>
+</li>
+<li>
+    <a href="{% url 'registered_user:user_profile' user.pk %}">
+        <i class="text-warning fa fa-user" aria-hidden="true"></i>
+        <span>MY PROFILE</span>
+    </a>
+</li>
+{% endblock %}
+{% block body %}
+
+<div class="row">
+    <h2 class="text-center">Buy Orders</h2>
+    <div class="col-md-6 col-lg-12 col-xl-6">
+        <div class="row">
+            {% for fields in user.buyorders_set.all %}
+            <div class="col-md-12 col-lg-6 col-xl-6">
+                <section class="panel panel-featured-left panel-featured-quartenary">
+                    <div class="panel-body">
+                        <div class="widget-summary">
+                            <div class="widget-summary-col widget-summary-col-icon">
+                                <div class="summary-icon bg-quartenary">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                            <div class="widget-summary-col">
+                                <div class="summary">
+                                    <h3 class="text-center">{{ fields.buy_amount_currency }} {{ fields.buy_amount }}0 for {{ fields.buy_coin }}</h3>
+                                    <div class="info">
+                                        <strong class="lead pull-right">&#8358; {{ fields.buy_amount_in_ngn }}0</strong><br>
+                                    </div>
+                                </div>
+                                <div class="summary-footer">
+                                    <p>Order time: {{ fields.timestamp }}</p>
+                                    <!--<p>Order ID: {{ fields.order_id }}</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            {% endfor %}
+
+            <input id="p" type="hidden" value="{{ btc_price }}">
+            <script>
+                var price = document.getElementById('p').value;
+                var a = price.substr(4);
+                var b = parseFloat(a);
+            </script>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <h2 class="text-center">Sell Orders</h2>
+    <div class="col-md-6 col-lg-12 col-xl-6">
+        <div class="row">
+            {% for fields in user.sellorders_set.all %}
+            <div class="col-md-12 col-lg-6 col-xl-6">
+                <section class="panel panel-featured-left panel-featured-primary">
+                    <div class="panel-body">
+                        <div class="widget-summary">
+                            <div class="widget-summary-col widget-summary-col-icon">
+                                <div class="summary-icon bg-primary">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                            <div class="widget-summary-col">
+                                <div class="summary">
+                                    <h3 class="text-center">{{ fields.sell_amount_currency }} {{ fields.sell_amount }}0 for {{ fields.sell_coin }}</h3>
+                                    <div class="info">
+                                        <strong class="lead pull-right">&#8358; {{ fields.sell_amount_in_ngn }}0</strong><br>
+                                    </div>
+                                </div>
+                                <div class="summary-footer">
+                                    <p>Order time: {{ fields.timestamp }}</p>
+                                    <!--<p>Order ID: {{ fields.order_id }}</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

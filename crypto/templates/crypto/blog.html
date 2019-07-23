@@ -1,0 +1,44 @@
+{% extends 'crypto/index.html' %}
+{% load static %}
+{% block title %} blog {% endblock %}
+{% block body %}
+<br><br><br><br>
+<!--{% for key, value in crypto_prices.DISPLAY.items %}-->
+<!--<strong>Name: {{ key }}</strong><br>-->
+<!--<strong>Price: {{ value.USD.PRICE }}</strong><br>-->
+<!--<strong>Daily High: {{ value.USD.HIGHDAY }}</strong><br>-->
+<!--<strong>Daily Low: {{ value.USD.LOWDAY }}</strong><br>-->
+<!--<strong>Market Cap: {{ value.USD.MKTCAP }}</strong><br><br>-->
+<!--{% endfor %}-->
+<!--{{ crypto_prices.DISPLAY.BTC.USD }}-->
+<section class="pricing-table2 cid-rvfrt49QEM" id="pricing-tables2-f">
+    <h1 class="text-center">Welcome to Coinrios Crypto News Network</h1>
+    <p class="text-center">Your source for up to the minute Crypto Currency and Blockchain news!</p><hr>
+    <div class="container-fluid">
+        <div class="media-containr-row row">
+        {% for news in crypto_news.Data %}
+
+            <div class="plan col-12 justify-contet-center favorite col-md-6" style="max-width: inherit;">
+                <div class="plan-header text-center pt-5">
+                    <img src="{{ news.imageurl }}" alt="{{ news.source }}"><hr>
+                    <h3 class="plan-title mbr-fonts-style display-6">{{ news.title }}</h3>
+                    <div class="plan-price">
+
+                    </div>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-list align-center">
+                        <ul class="list-group list-group-flush mbr-fonts-style display-7">
+                            <li class="list-group-item">{{ news.body }}</li>
+                        </ul>
+                    </div>
+                    <div class="mbr-section-btn text-center py-4 pb-5">
+                        <a href="{{ news.url }}" target="_blank" class="btn btn-primary display-4">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

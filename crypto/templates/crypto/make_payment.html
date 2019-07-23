@@ -1,0 +1,39 @@
+{% extends 'crypto/index.html' %}
+{% load static %}{% load paystack %} {% load humanize %}
+{% block title %} Make Payment {% endblock %}
+
+{% block body %}
+<style>
+    #payment_btn form button{
+        width: 120px;
+        padding: 10px;
+    }
+</style>
+<br><br><br><br>
+
+<section class="pricing-table2 cid-rvfrt49QEM" id="pricing-tables2-f">
+    <h1 class="text-center">Make Payment</h1>
+    <div class="container-fluid">
+        <div class="media-containr-row row"></div>
+    </div>
+</section>
+
+<div class="container" style="background: #f9f9f9;">
+        <div class="media-container-row">
+
+            <div class="plan col-12 mx-2 my-2 favorite justify-content-center col-md-4 bg-white">
+
+                <div class="plan-header text-center pt-5">
+                    <h3 class="plan-title text-secondary mbr-fonts-style display-5">ORDER DETAILS</h3><hr>
+                </div>
+                <div class="plan-body">
+                    <h5>Coin: {{ request.session.buy_coin }}</h5><hr>
+                    <h5>Amount: {{ request.session.buy_amount_currency }} {{ request.session.buy_amount|intcomma }}</h5><hr>
+                    <h5 class="ext-center">Naira: &#8358; {{ total|intcomma }}0</h5><hr>
+                    <span id="payment_btn">{% paystack_button amount=total email=user.email %}</span><br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

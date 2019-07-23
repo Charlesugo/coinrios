@@ -18,9 +18,23 @@ class RegisteredUserSignUpView(CreateView):
         return super().get_context_data(**kwargs)
 
     def form_valid(self, form):
-        user = form.save()
-        # login(self.request, user)
-        return redirect('registered_user:dashboard')
+        if self.request.method == "POST":
+            form = RegisteredUserSignUpForm(self.request.POST, self.request.FILES)
+            if form.is_valid():
+                # check_form = form.save(commit=False)
+                form.save()
+                return redirect('registered_user:dashboard')
+            else:
+                # request.session['wrong_file_or_size'] = True
+                # request.session['wrong_file_or_size'].set_expiry(5)
+
+                args = {}
+                return redirect('create_registered_user')
+
+    #     user = form.save()
+    #     # login(self.request, user)
+    #     return redirect('registered_user:dashboard')
+
 
 "2216133060"
 
